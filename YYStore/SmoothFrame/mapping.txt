@@ -1,0 +1,1893 @@
+com.android.volley.AuthFailureError -> com.android.volley.a:
+    android.content.Intent mResolutionIntent -> b
+    void <init>() -> <init>
+    void <init>(com.android.volley.NetworkResponse) -> <init>
+    java.lang.String getMessage() -> getMessage
+com.android.volley.Cache -> com.android.volley.b:
+    com.android.volley.Cache$Entry get(java.lang.String) -> a
+    void put(java.lang.String,com.android.volley.Cache$Entry) -> a
+    void initialize() -> a
+com.android.volley.Cache$Entry -> com.android.volley.c:
+    byte[] data -> a
+    java.lang.String etag -> b
+    long serverDate -> c
+    long lastModified -> d
+    long ttl -> e
+    long softTtl -> f
+    java.util.Map responseHeaders -> g
+    void <init>() -> <init>
+    boolean isExpired() -> a
+    boolean refreshNeeded() -> b
+com.android.volley.CacheDispatcher -> com.android.volley.d:
+    boolean DEBUG -> a
+    java.util.concurrent.BlockingQueue mCacheQueue -> b
+    java.util.concurrent.BlockingQueue mNetworkQueue -> c
+    com.android.volley.Cache mCache -> d
+    com.android.volley.ResponseDelivery mDelivery -> e
+    boolean mQuit -> f
+    void <init>(java.util.concurrent.BlockingQueue,java.util.concurrent.BlockingQueue,com.android.volley.Cache,com.android.volley.ResponseDelivery) -> <init>
+    void quit() -> a
+    void run() -> run
+    java.util.concurrent.BlockingQueue access$000(com.android.volley.CacheDispatcher) -> a
+    void <clinit>() -> <clinit>
+com.android.volley.CacheDispatcher$1 -> com.android.volley.e:
+    com.android.volley.Request val$request -> a
+    com.android.volley.CacheDispatcher this$0 -> b
+    void <init>(com.android.volley.CacheDispatcher,com.android.volley.Request) -> <init>
+    void run() -> run
+com.android.volley.ExecutorDelivery -> com.android.volley.f:
+    java.util.concurrent.Executor mResponsePoster -> a
+    void <init>(android.os.Handler) -> <init>
+    void postResponse(com.android.volley.Request,com.android.volley.Response) -> a
+    void postResponse(com.android.volley.Request,com.android.volley.Response,java.lang.Runnable) -> a
+    void postError(com.android.volley.Request,com.android.volley.VolleyError) -> a
+com.android.volley.ExecutorDelivery$1 -> com.android.volley.g:
+    android.os.Handler val$handler -> a
+    com.android.volley.ExecutorDelivery this$0 -> b
+    void <init>(com.android.volley.ExecutorDelivery,android.os.Handler) -> <init>
+    void execute(java.lang.Runnable) -> execute
+com.android.volley.ExecutorDelivery$ResponseDeliveryRunnable -> com.android.volley.h:
+    com.android.volley.Request mRequest -> b
+    com.android.volley.Response mResponse -> c
+    java.lang.Runnable mRunnable -> d
+    com.android.volley.ExecutorDelivery this$0 -> a
+    void <init>(com.android.volley.ExecutorDelivery,com.android.volley.Request,com.android.volley.Response,java.lang.Runnable) -> <init>
+    void run() -> run
+com.android.volley.Network -> com.android.volley.i:
+    com.android.volley.NetworkResponse performRequest(com.android.volley.Request) -> a
+com.android.volley.NetworkDispatcher -> com.android.volley.j:
+    java.util.concurrent.BlockingQueue mQueue -> a
+    com.android.volley.Network mNetwork -> b
+    com.android.volley.Cache mCache -> c
+    com.android.volley.ResponseDelivery mDelivery -> d
+    boolean mQuit -> e
+    void <init>(java.util.concurrent.BlockingQueue,com.android.volley.Network,com.android.volley.Cache,com.android.volley.ResponseDelivery) -> <init>
+    void quit() -> a
+    void addTrafficStatsTag(com.android.volley.Request) -> a
+    void run() -> run
+    void parseAndDeliverNetworkError(com.android.volley.Request,com.android.volley.VolleyError) -> a
+com.android.volley.NetworkError -> com.android.volley.k:
+    void <init>() -> <init>
+    void <init>(java.lang.Throwable) -> <init>
+com.android.volley.NetworkResponse -> com.android.volley.l:
+    int statusCode -> a
+    byte[] data -> b
+    java.util.Map headers -> c
+    boolean notModified -> d
+    long networkTimeMs -> e
+    void <init>(int,byte[],java.util.Map,boolean,long) -> <init>
+    void <init>(byte[],java.util.Map) -> <init>
+com.android.volley.NoConnectionError -> com.android.volley.m:
+    void <init>() -> <init>
+    void <init>(java.lang.Throwable) -> <init>
+com.android.volley.RedirectError -> com.android.volley.n:
+    void <init>() -> <init>
+    void <init>(com.android.volley.NetworkResponse) -> <init>
+com.android.volley.Request -> com.android.volley.o:
+    com.android.volley.VolleyLog$MarkerLog mEventLog -> a
+    int mMethod -> b
+    java.lang.String mUrl -> c
+    java.lang.String mRedirectUrl -> d
+    int mDefaultTrafficStatsTag -> e
+    com.android.volley.Response$ErrorListener mErrorListener -> f
+    java.lang.Integer mSequence -> g
+    com.android.volley.RequestQueue mRequestQueue -> h
+    boolean mShouldCache -> i
+    boolean mCanceled -> j
+    boolean mResponseDelivered -> k
+    com.android.volley.RetryPolicy mRetryPolicy -> l
+    com.android.volley.Cache$Entry mCacheEntry -> m
+    java.lang.Object mTag -> n
+    int getMethod() -> a
+    java.lang.Object getTag() -> b
+    int getTrafficStatsTag() -> c
+    void addMarker(java.lang.String) -> a
+    void finish(java.lang.String) -> b
+    java.lang.String getUrl() -> d
+    java.lang.String getOriginUrl() -> e
+    void setRedirectUrl(java.lang.String) -> c
+    java.lang.String getCacheKey() -> f
+    com.android.volley.Request setCacheEntry(com.android.volley.Cache$Entry) -> a
+    com.android.volley.Cache$Entry getCacheEntry() -> g
+    void cancel() -> h
+    boolean isCanceled() -> i
+    java.util.Map getHeaders() -> j
+    java.util.Map getPostParams() -> k
+    java.lang.String getPostParamsEncoding() -> l
+    java.lang.String getPostBodyContentType() -> m
+    byte[] getPostBody() -> n
+    java.util.Map getParams() -> o
+    java.lang.String getParamsEncoding() -> p
+    java.lang.String getBodyContentType() -> q
+    byte[] getBody() -> r
+    byte[] encodeParameters(java.util.Map,java.lang.String) -> a
+    boolean shouldCache() -> s
+    com.android.volley.Request$Priority getPriority() -> t
+    int getTimeoutMs() -> u
+    com.android.volley.RetryPolicy getRetryPolicy() -> v
+    void markDelivered() -> w
+    boolean hasHadResponseDelivered() -> x
+    com.android.volley.Response parseNetworkResponse(com.android.volley.NetworkResponse) -> a
+    com.android.volley.VolleyError parseNetworkError(com.android.volley.VolleyError) -> a
+    void deliverResponse(java.lang.Object) -> a
+    void deliverError(com.android.volley.VolleyError) -> b
+    int compareTo(com.android.volley.Request) -> a
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+    com.android.volley.VolleyLog$MarkerLog access$000(com.android.volley.Request) -> b
+com.android.volley.Request$1 -> com.android.volley.p:
+    java.lang.String val$tag -> a
+    long val$threadId -> b
+    com.android.volley.Request this$0 -> c
+    void <init>(com.android.volley.Request,java.lang.String,long) -> <init>
+    void run() -> run
+com.android.volley.Request$Priority -> com.android.volley.q:
+    com.android.volley.Request$Priority LOW -> a
+    com.android.volley.Request$Priority NORMAL -> b
+    com.android.volley.Request$Priority HIGH -> c
+    com.android.volley.Request$Priority IMMEDIATE -> d
+    com.android.volley.Request$Priority[] $VALUES -> e
+    com.android.volley.Request$Priority[] values() -> values
+    com.android.volley.Request$Priority valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.android.volley.RequestQueue -> com.android.volley.r:
+    java.util.concurrent.atomic.AtomicInteger mSequenceGenerator -> a
+    java.util.Map mWaitingRequests -> b
+    java.util.Set mCurrentRequests -> c
+    java.util.concurrent.PriorityBlockingQueue mCacheQueue -> d
+    java.util.concurrent.PriorityBlockingQueue mNetworkQueue -> e
+    com.android.volley.Cache mCache -> f
+    com.android.volley.Network mNetwork -> g
+    com.android.volley.ResponseDelivery mDelivery -> h
+    com.android.volley.NetworkDispatcher[] mDispatchers -> i
+    com.android.volley.CacheDispatcher mCacheDispatcher -> j
+    java.util.List mFinishedListeners -> k
+    void <init>(com.android.volley.Cache,com.android.volley.Network,int,com.android.volley.ResponseDelivery) -> <init>
+    void <init>(com.android.volley.Cache,com.android.volley.Network,int) -> <init>
+    void <init>(com.android.volley.Cache,com.android.volley.Network) -> <init>
+    void start() -> a
+    void stop() -> b
+    void cancelAll(com.android.volley.RequestQueue$RequestFilter) -> a
+    void cancelAll(java.lang.Object) -> a
+    void finish(com.android.volley.Request) -> a
+com.android.volley.RequestQueue$1 -> com.android.volley.s:
+    java.lang.Object val$tag -> a
+    com.android.volley.RequestQueue this$0 -> b
+    void <init>(com.android.volley.RequestQueue,java.lang.Object) -> <init>
+    boolean apply(com.android.volley.Request) -> a
+com.android.volley.RequestQueue$RequestFilter -> com.android.volley.t:
+    boolean apply(com.android.volley.Request) -> a
+com.android.volley.RequestQueue$RequestFinishedListener -> com.android.volley.u:
+    void onRequestFinished(com.android.volley.Request) -> a
+com.android.volley.Response -> com.android.volley.v:
+    java.lang.Object result -> a
+    com.android.volley.Cache$Entry cacheEntry -> b
+    com.android.volley.VolleyError error -> c
+    boolean intermediate -> d
+    com.android.volley.Response error(com.android.volley.VolleyError) -> a
+    boolean isSuccess() -> a
+    void <init>(com.android.volley.VolleyError) -> <init>
+com.android.volley.Response$ErrorListener -> com.android.volley.w:
+    void onErrorResponse(com.android.volley.VolleyError) -> a
+com.android.volley.ResponseDelivery -> com.android.volley.x:
+    void postResponse(com.android.volley.Request,com.android.volley.Response) -> a
+    void postResponse(com.android.volley.Request,com.android.volley.Response,java.lang.Runnable) -> a
+    void postError(com.android.volley.Request,com.android.volley.VolleyError) -> a
+com.android.volley.RetryPolicy -> com.android.volley.y:
+    int getCurrentTimeout() -> a
+    int getCurrentRetryCount() -> b
+    void retry(com.android.volley.VolleyError) -> a
+com.android.volley.ServerError -> com.android.volley.z:
+    void <init>(com.android.volley.NetworkResponse) -> <init>
+    void <init>() -> <init>
+com.android.volley.TimeoutError -> com.android.volley.aa:
+    void <init>() -> <init>
+com.android.volley.VolleyError -> com.android.volley.ab:
+    com.android.volley.NetworkResponse networkResponse -> a
+    long networkTimeMs -> b
+    void <init>() -> <init>
+    void <init>(com.android.volley.NetworkResponse) -> <init>
+    void <init>(java.lang.Throwable) -> <init>
+    void setNetworkTimeMs(long) -> a
+com.android.volley.VolleyLog -> com.android.volley.ac:
+    java.lang.String TAG -> a
+    boolean DEBUG -> b
+    void <init>() -> <init>
+    void v(java.lang.String,java.lang.Object[]) -> a
+    void d(java.lang.String,java.lang.Object[]) -> b
+    void e(java.lang.String,java.lang.Object[]) -> c
+    void e(java.lang.Throwable,java.lang.String,java.lang.Object[]) -> a
+    java.lang.String buildMessage(java.lang.String,java.lang.Object[]) -> d
+    void <clinit>() -> <clinit>
+com.android.volley.VolleyLog$MarkerLog -> com.android.volley.ad:
+    boolean ENABLED -> a
+    java.util.List mMarkers -> b
+    boolean mFinished -> c
+    void add(java.lang.String,long) -> a
+    void finish(java.lang.String) -> a
+    void finalize() -> finalize
+    long getTotalDuration() -> a
+    void <clinit>() -> <clinit>
+com.android.volley.VolleyLog$MarkerLog$Marker -> com.android.volley.ae:
+    java.lang.String name -> a
+    long thread -> b
+    long time -> c
+    void <init>(java.lang.String,long,long) -> <init>
+com.android.volley.toolbox.BasicNetwork -> com.android.volley.toolbox.a:
+    boolean DEBUG -> a
+    int SLOW_REQUEST_THRESHOLD_MS -> d
+    int DEFAULT_POOL_SIZE -> e
+    com.android.volley.toolbox.HttpStack mHttpStack -> b
+    com.android.volley.toolbox.ByteArrayPool mPool -> c
+    void <init>(com.android.volley.toolbox.HttpStack) -> <init>
+    void <init>(com.android.volley.toolbox.HttpStack,com.android.volley.toolbox.ByteArrayPool) -> <init>
+    com.android.volley.NetworkResponse performRequest(com.android.volley.Request) -> a
+    void logSlowRequests(long,com.android.volley.Request,byte[],org.apache.http.StatusLine) -> a
+    void attemptRetryOnException(java.lang.String,com.android.volley.Request,com.android.volley.VolleyError) -> a
+    void addCacheHeaders(java.util.Map,com.android.volley.Cache$Entry) -> a
+    byte[] entityToBytes(org.apache.http.HttpEntity) -> a
+    java.util.Map convertHeaders(org.apache.http.Header[]) -> a
+    void <clinit>() -> <clinit>
+com.android.volley.toolbox.ByteArrayPool -> com.android.volley.toolbox.b:
+    java.util.List mBuffersByLastUse -> b
+    java.util.List mBuffersBySize -> c
+    int mCurrentSize -> d
+    int mSizeLimit -> e
+    java.util.Comparator BUF_COMPARATOR -> a
+    void <init>(int) -> <init>
+    byte[] getBuf(int) -> a
+    void returnBuf(byte[]) -> a
+    void trim() -> a
+    void <clinit>() -> <clinit>
+com.android.volley.toolbox.ByteArrayPool$1 -> com.android.volley.toolbox.c:
+    void <init>() -> <init>
+    int compare(byte[],byte[]) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.android.volley.toolbox.DiskBasedCache -> com.android.volley.toolbox.d:
+    java.util.Map mEntries -> a
+    long mTotalSize -> b
+    java.io.File mRootDirectory -> c
+    int mMaxCacheSizeInBytes -> d
+    void <init>(java.io.File,int) -> <init>
+    void <init>(java.io.File) -> <init>
+    com.android.volley.Cache$Entry get(java.lang.String) -> a
+    void initialize() -> a
+    void put(java.lang.String,com.android.volley.Cache$Entry) -> a
+    void remove(java.lang.String) -> b
+    java.lang.String getFilenameForKey(java.lang.String) -> d
+    java.io.File getFileForKey(java.lang.String) -> c
+    void pruneIfNeeded(int) -> a
+    void putEntry(java.lang.String,com.android.volley.toolbox.DiskBasedCache$CacheHeader) -> a
+    void removeEntry(java.lang.String) -> e
+    byte[] streamToBytes(java.io.InputStream,int) -> a
+    int read(java.io.InputStream) -> e
+    void writeInt(java.io.OutputStream,int) -> a
+    int readInt(java.io.InputStream) -> a
+    void writeLong(java.io.OutputStream,long) -> a
+    long readLong(java.io.InputStream) -> b
+    void writeString(java.io.OutputStream,java.lang.String) -> a
+    java.lang.String readString(java.io.InputStream) -> c
+    void writeStringStringMap(java.util.Map,java.io.OutputStream) -> a
+    java.util.Map readStringStringMap(java.io.InputStream) -> d
+com.android.volley.toolbox.DiskBasedCache$1 -> com.android.volley.toolbox.e:
+com.android.volley.toolbox.DiskBasedCache$CacheHeader -> com.android.volley.toolbox.f:
+    long size -> a
+    java.lang.String key -> b
+    java.lang.String etag -> c
+    long serverDate -> d
+    long lastModified -> e
+    long ttl -> f
+    long softTtl -> g
+    java.util.Map responseHeaders -> h
+    void <init>() -> <init>
+    void <init>(java.lang.String,com.android.volley.Cache$Entry) -> <init>
+    com.android.volley.toolbox.DiskBasedCache$CacheHeader readHeader(java.io.InputStream) -> a
+    com.android.volley.Cache$Entry toCacheEntry(byte[]) -> a
+    boolean writeHeader(java.io.OutputStream) -> a
+com.android.volley.toolbox.DiskBasedCache$CountingInputStream -> com.android.volley.toolbox.g:
+    int bytesRead -> a
+    void <init>(java.io.InputStream) -> <init>
+    int read() -> read
+    int read(byte[],int,int) -> read
+    void <init>(java.io.InputStream,com.android.volley.toolbox.DiskBasedCache$1) -> <init>
+    int access$100(com.android.volley.toolbox.DiskBasedCache$CountingInputStream) -> a
+com.android.volley.toolbox.HttpClientStack -> com.android.volley.toolbox.h:
+    org.apache.http.client.HttpClient mClient -> a
+    void <init>(org.apache.http.client.HttpClient) -> <init>
+    void addHeaders(org.apache.http.client.methods.HttpUriRequest,java.util.Map) -> a
+    org.apache.http.HttpResponse performRequest(com.android.volley.Request,java.util.Map) -> a
+    org.apache.http.client.methods.HttpUriRequest createHttpRequest(com.android.volley.Request,java.util.Map) -> b
+    void setEntityIfNonEmptyBody(org.apache.http.client.methods.HttpEntityEnclosingRequestBase,com.android.volley.Request) -> a
+    void onPrepareRequest(org.apache.http.client.methods.HttpUriRequest) -> a
+com.android.volley.toolbox.HttpClientStack$HttpPatch -> com.android.volley.toolbox.i:
+    void <init>() -> <init>
+    void <init>(java.lang.String) -> <init>
+com.android.volley.toolbox.HttpStack -> com.android.volley.toolbox.j:
+    org.apache.http.HttpResponse performRequest(com.android.volley.Request,java.util.Map) -> a
+com.android.volley.toolbox.HurlStack -> com.android.volley.toolbox.k:
+    com.android.volley.toolbox.HurlStack$UrlRewriter mUrlRewriter -> a
+    javax.net.ssl.SSLSocketFactory mSslSocketFactory -> b
+    void <init>() -> <init>
+    void <init>(com.android.volley.toolbox.HurlStack$UrlRewriter) -> <init>
+    void <init>(com.android.volley.toolbox.HurlStack$UrlRewriter,javax.net.ssl.SSLSocketFactory) -> <init>
+    org.apache.http.HttpResponse performRequest(com.android.volley.Request,java.util.Map) -> a
+    boolean hasResponseBody(int,int) -> a
+    org.apache.http.HttpEntity entityFromConnection(java.net.HttpURLConnection) -> a
+    java.net.HttpURLConnection createConnection(java.net.URL) -> a
+    java.net.HttpURLConnection openConnection(java.net.URL,com.android.volley.Request) -> a
+    void setConnectionParametersForRequest(java.net.HttpURLConnection,com.android.volley.Request) -> a
+    void addBodyIfExists(java.net.HttpURLConnection,com.android.volley.Request) -> b
+com.android.volley.toolbox.HurlStack$UrlRewriter -> com.android.volley.toolbox.l:
+    java.lang.String rewriteUrl(java.lang.String) -> a
+com.android.volley.toolbox.PoolingByteArrayOutputStream -> com.android.volley.toolbox.m:
+    com.android.volley.toolbox.ByteArrayPool mPool -> a
+    void <init>(com.android.volley.toolbox.ByteArrayPool,int) -> <init>
+    void close() -> close
+    void finalize() -> finalize
+    void expand(int) -> a
+    void write(byte[],int,int) -> write
+    void write(int) -> write
+com.android.volley.toolbox.Volley -> com.android.volley.toolbox.n:
+    com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack,int) -> a
+    com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack) -> a
+    com.android.volley.RequestQueue newRequestQueue(android.content.Context) -> a
+com.nineoldandroids.view.ViewHelper -> com.nineoldandroids.view.a:
+    void setAlpha(android.view.View,float) -> a
+    void setPivotX(android.view.View,float) -> b
+    void setPivotY(android.view.View,float) -> c
+    void setRotation(android.view.View,float) -> d
+    void setRotationX(android.view.View,float) -> e
+    void setRotationY(android.view.View,float) -> f
+    void setScaleX(android.view.View,float) -> g
+    void setScaleY(android.view.View,float) -> h
+    void setTranslationX(android.view.View,float) -> i
+    void setTranslationY(android.view.View,float) -> j
+com.nineoldandroids.view.ViewHelper$Honeycomb -> com.nineoldandroids.view.b:
+    void setAlpha(android.view.View,float) -> a
+    void setPivotX(android.view.View,float) -> b
+    void setPivotY(android.view.View,float) -> c
+    void setRotation(android.view.View,float) -> d
+    void setRotationX(android.view.View,float) -> e
+    void setRotationY(android.view.View,float) -> f
+    void setScaleX(android.view.View,float) -> g
+    void setScaleY(android.view.View,float) -> h
+    void setTranslationX(android.view.View,float) -> i
+    void setTranslationY(android.view.View,float) -> j
+com.nineoldandroids.view.animation.AnimatorProxy -> com.nineoldandroids.view.animation.a:
+    boolean NEEDS_PROXY -> a
+    java.util.WeakHashMap PROXIES -> b
+    java.lang.ref.WeakReference mView -> c
+    android.graphics.Camera mCamera -> d
+    boolean mHasPivot -> e
+    float mAlpha -> f
+    float mPivotX -> g
+    float mPivotY -> h
+    float mRotationX -> i
+    float mRotationY -> j
+    float mRotationZ -> k
+    float mScaleX -> l
+    float mScaleY -> m
+    float mTranslationX -> n
+    float mTranslationY -> o
+    android.graphics.RectF mBefore -> p
+    android.graphics.RectF mAfter -> q
+    android.graphics.Matrix mTempMatrix -> r
+    void <clinit>() -> <clinit>
+    com.nineoldandroids.view.animation.AnimatorProxy wrap(android.view.View) -> a
+    void <init>(android.view.View) -> <init>
+    void setAlpha(float) -> a
+    void setPivotX(float) -> b
+    void setPivotY(float) -> c
+    void setRotation(float) -> d
+    void setRotationX(float) -> e
+    void setRotationY(float) -> f
+    void setScaleX(float) -> g
+    void setScaleY(float) -> h
+    void setTranslationX(float) -> i
+    void setTranslationY(float) -> j
+    void prepareForUpdate() -> a
+    void invalidateAfterUpdate() -> b
+    void computeRect(android.graphics.RectF,android.view.View) -> a
+    void transformMatrix(android.graphics.Matrix,android.view.View) -> a
+    void applyTransformation(float,android.view.animation.Transformation) -> applyTransformation
+com.nostra13.universalimageloader.cache.disc.DiskCache -> com.nostra13.universalimageloader.cache.disc.a:
+    java.io.File get(java.lang.String) -> a
+    boolean save(java.lang.String,java.io.InputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener) -> a
+    boolean save(java.lang.String,android.graphics.Bitmap) -> a
+com.nostra13.universalimageloader.cache.disc.impl.BaseDiskCache -> com.nostra13.universalimageloader.cache.disc.impl.a:
+    android.graphics.Bitmap$CompressFormat DEFAULT_COMPRESS_FORMAT -> a
+    java.io.File cacheDir -> b
+    java.io.File reserveCacheDir -> c
+    com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator fileNameGenerator -> d
+    int bufferSize -> e
+    android.graphics.Bitmap$CompressFormat compressFormat -> f
+    int compressQuality -> g
+    void <init>(java.io.File,java.io.File,com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator) -> <init>
+    java.io.File get(java.lang.String) -> a
+    boolean save(java.lang.String,java.io.InputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener) -> a
+    boolean save(java.lang.String,android.graphics.Bitmap) -> a
+    java.io.File getFile(java.lang.String) -> b
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache -> com.nostra13.universalimageloader.cache.disc.impl.b:
+    void <init>(java.io.File,java.io.File,com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator) -> <init>
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache -> com.nostra13.universalimageloader.cache.disc.impl.ext.a:
+    java.util.regex.Pattern LEGAL_KEY_PATTERN -> a
+    java.io.File directory -> c
+    java.io.File journalFile -> d
+    java.io.File journalFileTmp -> e
+    java.io.File journalFileBackup -> f
+    int appVersion -> g
+    long maxSize -> h
+    int maxFileCount -> i
+    int valueCount -> j
+    long size -> k
+    int fileCount -> l
+    java.io.Writer journalWriter -> m
+    java.util.LinkedHashMap lruEntries -> n
+    int redundantOpCount -> o
+    long nextSequenceNumber -> p
+    java.util.concurrent.ThreadPoolExecutor executorService -> b
+    java.util.concurrent.Callable cleanupCallable -> q
+    java.io.OutputStream NULL_OUTPUT_STREAM -> r
+    void <init>(java.io.File,int,int,long,int) -> <init>
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache open(java.io.File,int,int,long,int) -> a
+    void readJournal() -> c
+    void readJournalLine(java.lang.String) -> d
+    void processJournal() -> d
+    void rebuildJournal() -> e
+    void deleteIfExists(java.io.File) -> a
+    void renameTo(java.io.File,java.io.File,boolean) -> a
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Snapshot get(java.lang.String) -> a
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor edit(java.lang.String) -> b
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor edit(java.lang.String,long) -> a
+    void completeEdit(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor,boolean) -> a
+    boolean journalRebuildRequired() -> f
+    boolean remove(java.lang.String) -> c
+    void checkNotClosed() -> g
+    void close() -> close
+    void trimToSize() -> h
+    void trimToFileCount() -> i
+    void delete() -> a
+    void validateKey(java.lang.String) -> e
+    java.io.Writer access$000(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> a
+    void access$100(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> b
+    void access$200(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> c
+    boolean access$300(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> d
+    void access$400(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> e
+    int access$502(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,int) -> a
+    int access$1900(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> f
+    java.io.File access$2000(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> g
+    java.io.OutputStream access$2100() -> b
+    void access$2300(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor,boolean) -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$1 -> com.nostra13.universalimageloader.cache.disc.impl.ext.b:
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache this$0 -> a
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache) -> <init>
+    java.lang.Void call() -> a
+    java.lang.Object call() -> call
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$2 -> com.nostra13.universalimageloader.cache.disc.impl.ext.c:
+    void <init>() -> <init>
+    void write(int) -> write
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor -> com.nostra13.universalimageloader.cache.disc.impl.ext.d:
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry entry -> b
+    boolean[] written -> c
+    boolean hasErrors -> d
+    boolean committed -> e
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache this$0 -> a
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry) -> <init>
+    java.io.OutputStream newOutputStream(int) -> a
+    void commit() -> a
+    void abort() -> b
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry,com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$1) -> <init>
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry access$1500(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor) -> a
+    boolean[] access$1600(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor) -> b
+    boolean access$2402(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor,boolean) -> a
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor$FaultHidingOutputStream -> com.nostra13.universalimageloader.cache.disc.impl.ext.e:
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor this$1 -> a
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor,java.io.OutputStream) -> <init>
+    void write(int) -> write
+    void write(byte[],int,int) -> write
+    void close() -> close
+    void flush() -> flush
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor,java.io.OutputStream,com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$1) -> <init>
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry -> com.nostra13.universalimageloader.cache.disc.impl.ext.f:
+    java.lang.String key -> b
+    long[] lengths -> c
+    boolean readable -> d
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor currentEditor -> e
+    long sequenceNumber -> f
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache this$0 -> a
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,java.lang.String) -> <init>
+    java.lang.String getLengths() -> a
+    void setLengths(java.lang.String[]) -> a
+    java.io.IOException invalidLengths(java.lang.String[]) -> b
+    java.io.File getCleanFile(int) -> a
+    java.io.File getDirtyFile(int) -> b
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,java.lang.String,com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$1) -> <init>
+    boolean access$702(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry,boolean) -> a
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor access$802(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry,com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor) -> a
+    void access$900(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry,java.lang.String[]) -> a
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor access$800(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry) -> a
+    long[] access$1100(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry) -> b
+    java.lang.String access$1200(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry) -> c
+    boolean access$700(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry) -> d
+    long access$1300(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry) -> e
+    long access$1302(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Entry,long) -> a
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Snapshot -> com.nostra13.universalimageloader.cache.disc.impl.ext.g:
+    java.lang.String key -> b
+    long sequenceNumber -> c
+    java.io.File[] files -> d
+    java.io.InputStream[] ins -> e
+    long[] lengths -> f
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache this$0 -> a
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,java.lang.String,long,java.io.File[],java.io.InputStream[],long[]) -> <init>
+    java.io.File getFile(int) -> a
+    void close() -> close
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,java.lang.String,long,java.io.File[],java.io.InputStream[],long[],com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$1) -> <init>
+com.nostra13.universalimageloader.cache.disc.impl.ext.LruDiskCache -> com.nostra13.universalimageloader.cache.disc.impl.ext.h:
+    android.graphics.Bitmap$CompressFormat DEFAULT_COMPRESS_FORMAT -> a
+    com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache cache -> b
+    java.io.File reserveCacheDir -> g
+    com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator fileNameGenerator -> c
+    int bufferSize -> d
+    android.graphics.Bitmap$CompressFormat compressFormat -> e
+    int compressQuality -> f
+    void <init>(java.io.File,java.io.File,com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator,long,int) -> <init>
+    void initCache(java.io.File,java.io.File,long,int) -> a
+    java.io.File get(java.lang.String) -> a
+    boolean save(java.lang.String,java.io.InputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener) -> a
+    boolean save(java.lang.String,android.graphics.Bitmap) -> a
+    java.lang.String getKey(java.lang.String) -> b
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.cache.disc.impl.ext.StrictLineReader -> com.nostra13.universalimageloader.cache.disc.impl.ext.i:
+    java.io.InputStream in -> a
+    java.nio.charset.Charset charset -> b
+    byte[] buf -> c
+    int pos -> d
+    int end -> e
+    void <init>(java.io.InputStream,java.nio.charset.Charset) -> <init>
+    void <init>(java.io.InputStream,int,java.nio.charset.Charset) -> <init>
+    void close() -> close
+    java.lang.String readLine() -> a
+    void fillBuf() -> b
+    java.nio.charset.Charset access$000(com.nostra13.universalimageloader.cache.disc.impl.ext.StrictLineReader) -> a
+com.nostra13.universalimageloader.cache.disc.impl.ext.StrictLineReader$1 -> com.nostra13.universalimageloader.cache.disc.impl.ext.j:
+    com.nostra13.universalimageloader.cache.disc.impl.ext.StrictLineReader this$0 -> a
+    void <init>(com.nostra13.universalimageloader.cache.disc.impl.ext.StrictLineReader,int) -> <init>
+    java.lang.String toString() -> toString
+com.nostra13.universalimageloader.cache.disc.impl.ext.Util -> com.nostra13.universalimageloader.cache.disc.impl.ext.k:
+    java.nio.charset.Charset US_ASCII -> a
+    java.nio.charset.Charset UTF_8 -> b
+    void deleteContents(java.io.File) -> a
+    void closeQuietly(java.io.Closeable) -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator -> com.nostra13.universalimageloader.cache.disc.naming.a:
+    java.lang.String generate(java.lang.String) -> a
+com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator -> com.nostra13.universalimageloader.cache.disc.naming.b:
+    void <init>() -> <init>
+    java.lang.String generate(java.lang.String) -> a
+com.nostra13.universalimageloader.cache.memory.MemoryCache -> com.nostra13.universalimageloader.cache.memory.a:
+    boolean put(java.lang.String,android.graphics.Bitmap) -> a
+    android.graphics.Bitmap get(java.lang.String) -> a
+    android.graphics.Bitmap remove(java.lang.String) -> b
+    java.util.Collection keys() -> a
+com.nostra13.universalimageloader.cache.memory.impl.FuzzyKeyMemoryCache -> com.nostra13.universalimageloader.cache.memory.impl.a:
+    com.nostra13.universalimageloader.cache.memory.MemoryCache cache -> a
+    java.util.Comparator keyComparator -> b
+    void <init>(com.nostra13.universalimageloader.cache.memory.MemoryCache,java.util.Comparator) -> <init>
+    boolean put(java.lang.String,android.graphics.Bitmap) -> a
+    android.graphics.Bitmap get(java.lang.String) -> a
+    android.graphics.Bitmap remove(java.lang.String) -> b
+    java.util.Collection keys() -> a
+com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache -> com.nostra13.universalimageloader.cache.memory.impl.b:
+    java.util.LinkedHashMap map -> a
+    int maxSize -> b
+    int size -> c
+    void <init>(int) -> <init>
+    android.graphics.Bitmap get(java.lang.String) -> a
+    boolean put(java.lang.String,android.graphics.Bitmap) -> a
+    void trimToSize(int) -> a
+    android.graphics.Bitmap remove(java.lang.String) -> b
+    java.util.Collection keys() -> a
+    int sizeOf(java.lang.String,android.graphics.Bitmap) -> b
+    java.lang.String toString() -> toString
+com.nostra13.universalimageloader.core.DefaultConfigurationFactory -> com.nostra13.universalimageloader.core.a:
+    java.util.concurrent.Executor createExecutor(int,int,com.nostra13.universalimageloader.core.assist.QueueProcessingType) -> a
+    java.util.concurrent.Executor createTaskDistributor() -> a
+    com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator createFileNameGenerator() -> b
+    com.nostra13.universalimageloader.cache.disc.DiskCache createDiskCache(android.content.Context,com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator,long,int) -> a
+    java.io.File createReserveDiskCacheDir(android.content.Context) -> b
+    com.nostra13.universalimageloader.cache.memory.MemoryCache createMemoryCache(android.content.Context,int) -> a
+    boolean hasHoneycomb() -> d
+    boolean isLargeHeap(android.content.Context) -> c
+    int getLargeMemoryClass(android.app.ActivityManager) -> a
+    com.nostra13.universalimageloader.core.download.ImageDownloader createImageDownloader(android.content.Context) -> a
+    com.nostra13.universalimageloader.core.decode.ImageDecoder createImageDecoder(boolean) -> a
+    com.nostra13.universalimageloader.core.display.BitmapDisplayer createBitmapDisplayer() -> c
+    java.util.concurrent.ThreadFactory createThreadFactory(int,java.lang.String) -> a
+com.nostra13.universalimageloader.core.DefaultConfigurationFactory$DefaultThreadFactory -> com.nostra13.universalimageloader.core.b:
+    java.util.concurrent.atomic.AtomicInteger poolNumber -> a
+    java.lang.ThreadGroup group -> b
+    java.util.concurrent.atomic.AtomicInteger threadNumber -> c
+    java.lang.String namePrefix -> d
+    int threadPriority -> e
+    void <init>(int,java.lang.String) -> <init>
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.DisplayBitmapTask -> com.nostra13.universalimageloader.core.c:
+    android.graphics.Bitmap bitmap -> a
+    java.lang.String imageUri -> b
+    com.nostra13.universalimageloader.core.imageaware.ImageAware imageAware -> c
+    java.lang.String memoryCacheKey -> d
+    com.nostra13.universalimageloader.core.display.BitmapDisplayer displayer -> e
+    com.nostra13.universalimageloader.core.listener.ImageLoadingListener listener -> f
+    com.nostra13.universalimageloader.core.ImageLoaderEngine engine -> g
+    com.nostra13.universalimageloader.core.assist.LoadedFrom loadedFrom -> h
+    void <init>(android.graphics.Bitmap,com.nostra13.universalimageloader.core.ImageLoadingInfo,com.nostra13.universalimageloader.core.ImageLoaderEngine,com.nostra13.universalimageloader.core.assist.LoadedFrom) -> <init>
+    void run() -> run
+    boolean isViewWasReused() -> a
+com.nostra13.universalimageloader.core.DisplayImageOptions -> com.nostra13.universalimageloader.core.d:
+    int imageResOnLoading -> a
+    int imageResForEmptyUri -> b
+    int imageResOnFail -> c
+    android.graphics.drawable.Drawable imageOnLoading -> d
+    android.graphics.drawable.Drawable imageForEmptyUri -> e
+    android.graphics.drawable.Drawable imageOnFail -> f
+    boolean resetViewBeforeLoading -> g
+    boolean cacheInMemory -> h
+    boolean cacheOnDisk -> i
+    com.nostra13.universalimageloader.core.assist.ImageScaleType imageScaleType -> j
+    android.graphics.BitmapFactory$Options decodingOptions -> k
+    int delayBeforeLoading -> l
+    boolean considerExifParams -> m
+    java.lang.Object extraForDownloader -> n
+    com.nostra13.universalimageloader.core.process.BitmapProcessor preProcessor -> o
+    com.nostra13.universalimageloader.core.process.BitmapProcessor postProcessor -> p
+    com.nostra13.universalimageloader.core.display.BitmapDisplayer displayer -> q
+    android.os.Handler handler -> r
+    boolean isSyncLoading -> s
+    void <init>(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> <init>
+    boolean shouldShowImageOnLoading() -> a
+    boolean shouldShowImageForEmptyUri() -> b
+    boolean shouldShowImageOnFail() -> c
+    boolean shouldPreProcess() -> d
+    boolean shouldPostProcess() -> e
+    boolean shouldDelayBeforeLoading() -> f
+    android.graphics.drawable.Drawable getImageOnLoading(android.content.res.Resources) -> a
+    android.graphics.drawable.Drawable getImageForEmptyUri(android.content.res.Resources) -> b
+    android.graphics.drawable.Drawable getImageOnFail(android.content.res.Resources) -> c
+    boolean isResetViewBeforeLoading() -> g
+    boolean isCacheInMemory() -> h
+    boolean isCacheOnDisk() -> i
+    com.nostra13.universalimageloader.core.assist.ImageScaleType getImageScaleType() -> j
+    android.graphics.BitmapFactory$Options getDecodingOptions() -> k
+    int getDelayBeforeLoading() -> l
+    boolean isConsiderExifParams() -> m
+    java.lang.Object getExtraForDownloader() -> n
+    com.nostra13.universalimageloader.core.process.BitmapProcessor getPreProcessor() -> o
+    com.nostra13.universalimageloader.core.process.BitmapProcessor getPostProcessor() -> p
+    com.nostra13.universalimageloader.core.display.BitmapDisplayer getDisplayer() -> q
+    android.os.Handler getHandler() -> r
+    boolean isSyncLoading() -> s
+    com.nostra13.universalimageloader.core.DisplayImageOptions createSimple() -> t
+    int access$1900(com.nostra13.universalimageloader.core.DisplayImageOptions) -> a
+    int access$2000(com.nostra13.universalimageloader.core.DisplayImageOptions) -> b
+    int access$2100(com.nostra13.universalimageloader.core.DisplayImageOptions) -> c
+    android.graphics.drawable.Drawable access$2200(com.nostra13.universalimageloader.core.DisplayImageOptions) -> d
+    android.graphics.drawable.Drawable access$2300(com.nostra13.universalimageloader.core.DisplayImageOptions) -> e
+    android.graphics.drawable.Drawable access$2400(com.nostra13.universalimageloader.core.DisplayImageOptions) -> f
+    boolean access$2500(com.nostra13.universalimageloader.core.DisplayImageOptions) -> g
+    boolean access$2600(com.nostra13.universalimageloader.core.DisplayImageOptions) -> h
+    boolean access$2700(com.nostra13.universalimageloader.core.DisplayImageOptions) -> i
+    com.nostra13.universalimageloader.core.assist.ImageScaleType access$2800(com.nostra13.universalimageloader.core.DisplayImageOptions) -> j
+    android.graphics.BitmapFactory$Options access$2900(com.nostra13.universalimageloader.core.DisplayImageOptions) -> k
+    int access$3000(com.nostra13.universalimageloader.core.DisplayImageOptions) -> l
+    boolean access$3100(com.nostra13.universalimageloader.core.DisplayImageOptions) -> m
+    java.lang.Object access$3200(com.nostra13.universalimageloader.core.DisplayImageOptions) -> n
+    com.nostra13.universalimageloader.core.process.BitmapProcessor access$3300(com.nostra13.universalimageloader.core.DisplayImageOptions) -> o
+    com.nostra13.universalimageloader.core.process.BitmapProcessor access$3400(com.nostra13.universalimageloader.core.DisplayImageOptions) -> p
+    com.nostra13.universalimageloader.core.display.BitmapDisplayer access$3500(com.nostra13.universalimageloader.core.DisplayImageOptions) -> q
+    android.os.Handler access$3600(com.nostra13.universalimageloader.core.DisplayImageOptions) -> r
+    boolean access$3700(com.nostra13.universalimageloader.core.DisplayImageOptions) -> s
+    void <init>(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder,com.nostra13.universalimageloader.core.DisplayImageOptions$1) -> <init>
+com.nostra13.universalimageloader.core.DisplayImageOptions$1 -> com.nostra13.universalimageloader.core.e:
+com.nostra13.universalimageloader.core.DisplayImageOptions$Builder -> com.nostra13.universalimageloader.core.f:
+    int imageResOnLoading -> a
+    int imageResForEmptyUri -> b
+    int imageResOnFail -> c
+    android.graphics.drawable.Drawable imageOnLoading -> d
+    android.graphics.drawable.Drawable imageForEmptyUri -> e
+    android.graphics.drawable.Drawable imageOnFail -> f
+    boolean resetViewBeforeLoading -> g
+    boolean cacheInMemory -> h
+    boolean cacheOnDisk -> i
+    com.nostra13.universalimageloader.core.assist.ImageScaleType imageScaleType -> j
+    android.graphics.BitmapFactory$Options decodingOptions -> k
+    int delayBeforeLoading -> l
+    boolean considerExifParams -> m
+    java.lang.Object extraForDownloader -> n
+    com.nostra13.universalimageloader.core.process.BitmapProcessor preProcessor -> o
+    com.nostra13.universalimageloader.core.process.BitmapProcessor postProcessor -> p
+    com.nostra13.universalimageloader.core.display.BitmapDisplayer displayer -> q
+    android.os.Handler handler -> r
+    boolean isSyncLoading -> s
+    void <init>() -> <init>
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageOnLoading(int) -> a
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageForEmptyUri(int) -> b
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageOnFail(int) -> c
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder cacheInMemory(boolean) -> a
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder cacheOnDisk(boolean) -> b
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder imageScaleType(com.nostra13.universalimageloader.core.assist.ImageScaleType) -> a
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder bitmapConfig(android.graphics.Bitmap$Config) -> a
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder considerExifParams(boolean) -> c
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder displayer(com.nostra13.universalimageloader.core.display.BitmapDisplayer) -> a
+    com.nostra13.universalimageloader.core.DisplayImageOptions$Builder cloneFrom(com.nostra13.universalimageloader.core.DisplayImageOptions) -> a
+    com.nostra13.universalimageloader.core.DisplayImageOptions build() -> a
+    int access$000(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> a
+    int access$100(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> b
+    int access$200(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> c
+    android.graphics.drawable.Drawable access$300(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> d
+    android.graphics.drawable.Drawable access$400(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> e
+    android.graphics.drawable.Drawable access$500(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> f
+    boolean access$600(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> g
+    boolean access$700(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> h
+    boolean access$800(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> i
+    com.nostra13.universalimageloader.core.assist.ImageScaleType access$900(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> j
+    android.graphics.BitmapFactory$Options access$1000(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> k
+    int access$1100(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> l
+    boolean access$1200(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> m
+    java.lang.Object access$1300(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> n
+    com.nostra13.universalimageloader.core.process.BitmapProcessor access$1400(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> o
+    com.nostra13.universalimageloader.core.process.BitmapProcessor access$1500(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> p
+    com.nostra13.universalimageloader.core.display.BitmapDisplayer access$1600(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> q
+    android.os.Handler access$1700(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> r
+    boolean access$1800(com.nostra13.universalimageloader.core.DisplayImageOptions$Builder) -> s
+com.nostra13.universalimageloader.core.ImageLoader -> com.nostra13.universalimageloader.core.g:
+    java.lang.String TAG -> a
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration configuration -> b
+    com.nostra13.universalimageloader.core.ImageLoaderEngine engine -> c
+    com.nostra13.universalimageloader.core.listener.ImageLoadingListener defaultListener -> d
+    com.nostra13.universalimageloader.core.ImageLoader instance -> e
+    com.nostra13.universalimageloader.core.ImageLoader getInstance() -> a
+    void <init>() -> <init>
+    void init(com.nostra13.universalimageloader.core.ImageLoaderConfiguration) -> a
+    void displayImage(java.lang.String,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener,com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener) -> a
+    void displayImage(java.lang.String,android.widget.ImageView) -> a
+    void checkConfiguration() -> b
+    android.os.Handler defineHandler(com.nostra13.universalimageloader.core.DisplayImageOptions) -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.ImageLoaderConfiguration -> com.nostra13.universalimageloader.core.h:
+    android.content.res.Resources resources -> a
+    int maxImageWidthForMemoryCache -> b
+    int maxImageHeightForMemoryCache -> c
+    int maxImageWidthForDiskCache -> d
+    int maxImageHeightForDiskCache -> e
+    com.nostra13.universalimageloader.core.process.BitmapProcessor processorForDiskCache -> f
+    java.util.concurrent.Executor taskExecutor -> g
+    java.util.concurrent.Executor taskExecutorForCachedImages -> h
+    boolean customExecutor -> i
+    boolean customExecutorForCachedImages -> j
+    int threadPoolSize -> k
+    int threadPriority -> l
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType tasksProcessingType -> m
+    com.nostra13.universalimageloader.cache.memory.MemoryCache memoryCache -> n
+    com.nostra13.universalimageloader.cache.disc.DiskCache diskCache -> o
+    com.nostra13.universalimageloader.core.download.ImageDownloader downloader -> p
+    com.nostra13.universalimageloader.core.decode.ImageDecoder decoder -> q
+    com.nostra13.universalimageloader.core.DisplayImageOptions defaultDisplayImageOptions -> r
+    com.nostra13.universalimageloader.core.download.ImageDownloader networkDeniedDownloader -> s
+    com.nostra13.universalimageloader.core.download.ImageDownloader slowNetworkDownloader -> t
+    void <init>(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> <init>
+    com.nostra13.universalimageloader.core.assist.ImageSize getMaxImageSize() -> a
+    void <init>(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder,com.nostra13.universalimageloader.core.ImageLoaderConfiguration$1) -> <init>
+com.nostra13.universalimageloader.core.ImageLoaderConfiguration$1 -> com.nostra13.universalimageloader.core.i:
+    int[] $SwitchMap$com$nostra13$universalimageloader$core$download$ImageDownloader$Scheme -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder -> com.nostra13.universalimageloader.core.j:
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType DEFAULT_TASK_PROCESSING_TYPE -> a
+    android.content.Context context -> b
+    int maxImageWidthForMemoryCache -> c
+    int maxImageHeightForMemoryCache -> d
+    int maxImageWidthForDiskCache -> e
+    int maxImageHeightForDiskCache -> f
+    com.nostra13.universalimageloader.core.process.BitmapProcessor processorForDiskCache -> g
+    java.util.concurrent.Executor taskExecutor -> h
+    java.util.concurrent.Executor taskExecutorForCachedImages -> i
+    boolean customExecutor -> j
+    boolean customExecutorForCachedImages -> k
+    int threadPoolSize -> l
+    int threadPriority -> m
+    boolean denyCacheImageMultipleSizesInMemory -> n
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType tasksProcessingType -> o
+    int memoryCacheSize -> p
+    long diskCacheSize -> q
+    int diskCacheFileCount -> r
+    com.nostra13.universalimageloader.cache.memory.MemoryCache memoryCache -> s
+    com.nostra13.universalimageloader.cache.disc.DiskCache diskCache -> t
+    com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator diskCacheFileNameGenerator -> u
+    com.nostra13.universalimageloader.core.download.ImageDownloader downloader -> v
+    com.nostra13.universalimageloader.core.decode.ImageDecoder decoder -> w
+    com.nostra13.universalimageloader.core.DisplayImageOptions defaultDisplayImageOptions -> x
+    boolean writeLogs -> y
+    void <init>(android.content.Context) -> <init>
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder threadPriority(int) -> a
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder denyCacheImageMultipleSizesInMemory() -> a
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder memoryCacheSizePercentage(int) -> b
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder memoryCache(com.nostra13.universalimageloader.cache.memory.MemoryCache) -> a
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder diskCacheSize(int) -> c
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder diskCacheFileCount(int) -> d
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder diskCacheFileNameGenerator(com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator) -> a
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder imageDownloader(com.nostra13.universalimageloader.core.download.ImageDownloader) -> a
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder writeDebugLogs() -> b
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration build() -> c
+    void initEmptyFieldsWithDefaultValues() -> d
+    android.content.Context access$000(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> a
+    int access$100(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> b
+    int access$200(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> c
+    int access$300(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> d
+    int access$400(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> e
+    com.nostra13.universalimageloader.core.process.BitmapProcessor access$500(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> f
+    java.util.concurrent.Executor access$600(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> g
+    java.util.concurrent.Executor access$700(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> h
+    int access$800(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> i
+    int access$900(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> j
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType access$1000(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> k
+    com.nostra13.universalimageloader.cache.disc.DiskCache access$1100(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> l
+    com.nostra13.universalimageloader.cache.memory.MemoryCache access$1200(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> m
+    com.nostra13.universalimageloader.core.DisplayImageOptions access$1300(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> n
+    com.nostra13.universalimageloader.core.download.ImageDownloader access$1400(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> o
+    com.nostra13.universalimageloader.core.decode.ImageDecoder access$1500(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> p
+    boolean access$1600(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> q
+    boolean access$1700(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> r
+    boolean access$1800(com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder) -> s
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.ImageLoaderConfiguration$NetworkDeniedImageDownloader -> com.nostra13.universalimageloader.core.k:
+    com.nostra13.universalimageloader.core.download.ImageDownloader wrappedDownloader -> a
+    void <init>(com.nostra13.universalimageloader.core.download.ImageDownloader) -> <init>
+    java.io.InputStream getStream(java.lang.String,java.lang.Object) -> a
+com.nostra13.universalimageloader.core.ImageLoaderConfiguration$SlowNetworkImageDownloader -> com.nostra13.universalimageloader.core.l:
+    com.nostra13.universalimageloader.core.download.ImageDownloader wrappedDownloader -> a
+    void <init>(com.nostra13.universalimageloader.core.download.ImageDownloader) -> <init>
+    java.io.InputStream getStream(java.lang.String,java.lang.Object) -> a
+com.nostra13.universalimageloader.core.ImageLoaderEngine -> com.nostra13.universalimageloader.core.m:
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration configuration -> a
+    java.util.concurrent.Executor taskExecutor -> b
+    java.util.concurrent.Executor taskExecutorForCachedImages -> c
+    java.util.concurrent.Executor taskDistributor -> d
+    java.util.Map cacheKeysForImageAwares -> e
+    java.util.Map uriLocks -> f
+    java.util.concurrent.atomic.AtomicBoolean paused -> g
+    java.util.concurrent.atomic.AtomicBoolean networkDenied -> h
+    java.util.concurrent.atomic.AtomicBoolean slowNetwork -> i
+    java.lang.Object pauseLock -> j
+    void <init>(com.nostra13.universalimageloader.core.ImageLoaderConfiguration) -> <init>
+    void submit(com.nostra13.universalimageloader.core.LoadAndDisplayImageTask) -> a
+    void submit(com.nostra13.universalimageloader.core.ProcessAndDisplayImageTask) -> a
+    void initExecutorsIfNeed() -> e
+    java.util.concurrent.Executor createTaskExecutor() -> f
+    java.lang.String getLoadingUriForView(com.nostra13.universalimageloader.core.imageaware.ImageAware) -> a
+    void prepareDisplayTaskFor(com.nostra13.universalimageloader.core.imageaware.ImageAware,java.lang.String) -> a
+    void cancelDisplayTaskFor(com.nostra13.universalimageloader.core.imageaware.ImageAware) -> b
+    void fireCallback(java.lang.Runnable) -> a
+    java.util.concurrent.locks.ReentrantLock getLockForUri(java.lang.String) -> a
+    java.util.concurrent.atomic.AtomicBoolean getPause() -> a
+    java.lang.Object getPauseLock() -> b
+    boolean isNetworkDenied() -> c
+    boolean isSlowNetwork() -> d
+    void access$000(com.nostra13.universalimageloader.core.ImageLoaderEngine) -> a
+    java.util.concurrent.Executor access$100(com.nostra13.universalimageloader.core.ImageLoaderEngine) -> b
+    java.util.concurrent.Executor access$200(com.nostra13.universalimageloader.core.ImageLoaderEngine) -> c
+com.nostra13.universalimageloader.core.ImageLoaderEngine$1 -> com.nostra13.universalimageloader.core.n:
+    com.nostra13.universalimageloader.core.LoadAndDisplayImageTask val$task -> a
+    com.nostra13.universalimageloader.core.ImageLoaderEngine this$0 -> b
+    void <init>(com.nostra13.universalimageloader.core.ImageLoaderEngine,com.nostra13.universalimageloader.core.LoadAndDisplayImageTask) -> <init>
+    void run() -> run
+com.nostra13.universalimageloader.core.ImageLoadingInfo -> com.nostra13.universalimageloader.core.o:
+    java.lang.String uri -> a
+    java.lang.String memoryCacheKey -> b
+    com.nostra13.universalimageloader.core.imageaware.ImageAware imageAware -> c
+    com.nostra13.universalimageloader.core.assist.ImageSize targetSize -> d
+    com.nostra13.universalimageloader.core.DisplayImageOptions options -> e
+    com.nostra13.universalimageloader.core.listener.ImageLoadingListener listener -> f
+    com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener progressListener -> g
+    java.util.concurrent.locks.ReentrantLock loadFromUriLock -> h
+    void <init>(java.lang.String,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.assist.ImageSize,java.lang.String,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener,com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener,java.util.concurrent.locks.ReentrantLock) -> <init>
+com.nostra13.universalimageloader.core.LoadAndDisplayImageTask -> com.nostra13.universalimageloader.core.p:
+    com.nostra13.universalimageloader.core.ImageLoaderEngine engine -> f
+    com.nostra13.universalimageloader.core.ImageLoadingInfo imageLoadingInfo -> g
+    android.os.Handler handler -> h
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration configuration -> i
+    com.nostra13.universalimageloader.core.download.ImageDownloader downloader -> j
+    com.nostra13.universalimageloader.core.download.ImageDownloader networkDeniedDownloader -> k
+    com.nostra13.universalimageloader.core.download.ImageDownloader slowNetworkDownloader -> l
+    com.nostra13.universalimageloader.core.decode.ImageDecoder decoder -> m
+    java.lang.String uri -> a
+    java.lang.String memoryCacheKey -> n
+    com.nostra13.universalimageloader.core.imageaware.ImageAware imageAware -> b
+    com.nostra13.universalimageloader.core.assist.ImageSize targetSize -> o
+    com.nostra13.universalimageloader.core.DisplayImageOptions options -> c
+    com.nostra13.universalimageloader.core.listener.ImageLoadingListener listener -> d
+    com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener progressListener -> e
+    boolean syncLoading -> p
+    com.nostra13.universalimageloader.core.assist.LoadedFrom loadedFrom -> q
+    void <init>(com.nostra13.universalimageloader.core.ImageLoaderEngine,com.nostra13.universalimageloader.core.ImageLoadingInfo,android.os.Handler) -> <init>
+    void run() -> run
+    boolean waitIfPaused() -> b
+    boolean delayIfNeed() -> c
+    android.graphics.Bitmap tryLoadBitmap() -> d
+    android.graphics.Bitmap decodeImage(java.lang.String) -> a
+    boolean tryCacheImageOnDisk() -> e
+    boolean downloadImage() -> f
+    boolean resizeAndSaveImage(int,int) -> b
+    boolean onBytesCopied(int,int) -> a
+    boolean fireProgressEvent(int,int) -> c
+    void fireFailEvent(com.nostra13.universalimageloader.core.assist.FailReason$FailType,java.lang.Throwable) -> a
+    void fireCancelEvent() -> g
+    com.nostra13.universalimageloader.core.download.ImageDownloader getDownloader() -> h
+    void checkTaskNotActual() -> i
+    boolean isTaskNotActual() -> j
+    void checkViewCollected() -> k
+    boolean isViewCollected() -> l
+    void checkViewReused() -> m
+    boolean isViewReused() -> n
+    void checkTaskInterrupted() -> o
+    boolean isTaskInterrupted() -> p
+    java.lang.String getLoadingUri() -> a
+    void runTask(java.lang.Runnable,boolean,android.os.Handler,com.nostra13.universalimageloader.core.ImageLoaderEngine) -> a
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration access$000(com.nostra13.universalimageloader.core.LoadAndDisplayImageTask) -> a
+com.nostra13.universalimageloader.core.LoadAndDisplayImageTask$1 -> com.nostra13.universalimageloader.core.q:
+    int val$current -> a
+    int val$total -> b
+    com.nostra13.universalimageloader.core.LoadAndDisplayImageTask this$0 -> c
+    void <init>(com.nostra13.universalimageloader.core.LoadAndDisplayImageTask,int,int) -> <init>
+    void run() -> run
+com.nostra13.universalimageloader.core.LoadAndDisplayImageTask$2 -> com.nostra13.universalimageloader.core.r:
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType val$failType -> a
+    java.lang.Throwable val$failCause -> b
+    com.nostra13.universalimageloader.core.LoadAndDisplayImageTask this$0 -> c
+    void <init>(com.nostra13.universalimageloader.core.LoadAndDisplayImageTask,com.nostra13.universalimageloader.core.assist.FailReason$FailType,java.lang.Throwable) -> <init>
+    void run() -> run
+com.nostra13.universalimageloader.core.LoadAndDisplayImageTask$3 -> com.nostra13.universalimageloader.core.s:
+    com.nostra13.universalimageloader.core.LoadAndDisplayImageTask this$0 -> a
+    void <init>(com.nostra13.universalimageloader.core.LoadAndDisplayImageTask) -> <init>
+    void run() -> run
+com.nostra13.universalimageloader.core.LoadAndDisplayImageTask$TaskCancelledException -> com.nostra13.universalimageloader.core.t:
+    com.nostra13.universalimageloader.core.LoadAndDisplayImageTask this$0 -> a
+    void <init>(com.nostra13.universalimageloader.core.LoadAndDisplayImageTask) -> <init>
+com.nostra13.universalimageloader.core.ProcessAndDisplayImageTask -> com.nostra13.universalimageloader.core.u:
+    com.nostra13.universalimageloader.core.ImageLoaderEngine engine -> a
+    android.graphics.Bitmap bitmap -> b
+    com.nostra13.universalimageloader.core.ImageLoadingInfo imageLoadingInfo -> c
+    android.os.Handler handler -> d
+    void <init>(com.nostra13.universalimageloader.core.ImageLoaderEngine,android.graphics.Bitmap,com.nostra13.universalimageloader.core.ImageLoadingInfo,android.os.Handler) -> <init>
+    void run() -> run
+com.nostra13.universalimageloader.core.assist.ContentLengthInputStream -> com.nostra13.universalimageloader.core.assist.a:
+    java.io.InputStream stream -> a
+    int length -> b
+    void <init>(java.io.InputStream,int) -> <init>
+    int available() -> available
+    void close() -> close
+    void mark(int) -> mark
+    int read() -> read
+    int read(byte[]) -> read
+    int read(byte[],int,int) -> read
+    void reset() -> reset
+    long skip(long) -> skip
+    boolean markSupported() -> markSupported
+com.nostra13.universalimageloader.core.assist.FailReason -> com.nostra13.universalimageloader.core.assist.b:
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType type -> a
+    java.lang.Throwable cause -> b
+    void <init>(com.nostra13.universalimageloader.core.assist.FailReason$FailType,java.lang.Throwable) -> <init>
+com.nostra13.universalimageloader.core.assist.FailReason$FailType -> com.nostra13.universalimageloader.core.assist.c:
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType IO_ERROR -> a
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType DECODING_ERROR -> b
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType NETWORK_DENIED -> c
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType OUT_OF_MEMORY -> d
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType UNKNOWN -> e
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType[] $VALUES -> f
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType[] values() -> values
+    com.nostra13.universalimageloader.core.assist.FailReason$FailType valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.assist.FlushedInputStream -> com.nostra13.universalimageloader.core.assist.d:
+    void <init>(java.io.InputStream) -> <init>
+    long skip(long) -> skip
+com.nostra13.universalimageloader.core.assist.ImageScaleType -> com.nostra13.universalimageloader.core.assist.e:
+    com.nostra13.universalimageloader.core.assist.ImageScaleType NONE -> a
+    com.nostra13.universalimageloader.core.assist.ImageScaleType NONE_SAFE -> b
+    com.nostra13.universalimageloader.core.assist.ImageScaleType IN_SAMPLE_POWER_OF_2 -> c
+    com.nostra13.universalimageloader.core.assist.ImageScaleType IN_SAMPLE_INT -> d
+    com.nostra13.universalimageloader.core.assist.ImageScaleType EXACTLY -> e
+    com.nostra13.universalimageloader.core.assist.ImageScaleType EXACTLY_STRETCHED -> f
+    com.nostra13.universalimageloader.core.assist.ImageScaleType[] $VALUES -> g
+    com.nostra13.universalimageloader.core.assist.ImageScaleType[] values() -> values
+    com.nostra13.universalimageloader.core.assist.ImageScaleType valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.assist.ImageSize -> com.nostra13.universalimageloader.core.assist.f:
+    int width -> a
+    int height -> b
+    void <init>(int,int) -> <init>
+    void <init>(int,int,int) -> <init>
+    int getWidth() -> a
+    int getHeight() -> b
+    com.nostra13.universalimageloader.core.assist.ImageSize scaleDown(int) -> a
+    com.nostra13.universalimageloader.core.assist.ImageSize scale(float) -> a
+    java.lang.String toString() -> toString
+com.nostra13.universalimageloader.core.assist.LoadedFrom -> com.nostra13.universalimageloader.core.assist.g:
+    com.nostra13.universalimageloader.core.assist.LoadedFrom NETWORK -> a
+    com.nostra13.universalimageloader.core.assist.LoadedFrom DISC_CACHE -> b
+    com.nostra13.universalimageloader.core.assist.LoadedFrom MEMORY_CACHE -> c
+    com.nostra13.universalimageloader.core.assist.LoadedFrom[] $VALUES -> d
+    com.nostra13.universalimageloader.core.assist.LoadedFrom[] values() -> values
+    com.nostra13.universalimageloader.core.assist.LoadedFrom valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.assist.QueueProcessingType -> com.nostra13.universalimageloader.core.assist.h:
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType FIFO -> a
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType LIFO -> b
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType[] $VALUES -> c
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType[] values() -> values
+    com.nostra13.universalimageloader.core.assist.QueueProcessingType valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.assist.ViewScaleType -> com.nostra13.universalimageloader.core.assist.i:
+    com.nostra13.universalimageloader.core.assist.ViewScaleType FIT_INSIDE -> a
+    com.nostra13.universalimageloader.core.assist.ViewScaleType CROP -> b
+    com.nostra13.universalimageloader.core.assist.ViewScaleType[] $VALUES -> c
+    com.nostra13.universalimageloader.core.assist.ViewScaleType[] values() -> values
+    com.nostra13.universalimageloader.core.assist.ViewScaleType valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    com.nostra13.universalimageloader.core.assist.ViewScaleType fromImageView(android.widget.ImageView) -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.assist.ViewScaleType$1 -> com.nostra13.universalimageloader.core.assist.j:
+    int[] $SwitchMap$android$widget$ImageView$ScaleType -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.assist.deque.BlockingDeque -> com.nostra13.universalimageloader.core.assist.deque.a:
+com.nostra13.universalimageloader.core.assist.deque.Deque -> com.nostra13.universalimageloader.core.assist.deque.b:
+com.nostra13.universalimageloader.core.assist.deque.LIFOLinkedBlockingDeque -> com.nostra13.universalimageloader.core.assist.deque.c:
+    void <init>() -> <init>
+    boolean offer(java.lang.Object) -> offer
+    java.lang.Object remove() -> remove
+com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque -> com.nostra13.universalimageloader.core.assist.deque.d:
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node first -> a
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node last -> b
+    int count -> d
+    int capacity -> e
+    java.util.concurrent.locks.ReentrantLock lock -> c
+    java.util.concurrent.locks.Condition notEmpty -> f
+    java.util.concurrent.locks.Condition notFull -> g
+    void <init>() -> <init>
+    void <init>(int) -> <init>
+    boolean linkFirst(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node) -> b
+    boolean linkLast(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node) -> c
+    java.lang.Object unlinkFirst() -> f
+    java.lang.Object unlinkLast() -> g
+    void unlink(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node) -> a
+    void addLast(java.lang.Object) -> a
+    boolean offerFirst(java.lang.Object) -> b
+    boolean offerLast(java.lang.Object) -> c
+    void putLast(java.lang.Object) -> d
+    boolean offerLast(java.lang.Object,long,java.util.concurrent.TimeUnit) -> a
+    java.lang.Object removeFirst() -> a
+    java.lang.Object pollFirst() -> b
+    java.lang.Object takeFirst() -> c
+    java.lang.Object pollFirst(long,java.util.concurrent.TimeUnit) -> a
+    java.lang.Object getFirst() -> d
+    java.lang.Object peekFirst() -> e
+    boolean removeFirstOccurrence(java.lang.Object) -> e
+    boolean add(java.lang.Object) -> add
+    boolean offer(java.lang.Object) -> offer
+    void put(java.lang.Object) -> put
+    boolean offer(java.lang.Object,long,java.util.concurrent.TimeUnit) -> offer
+    java.lang.Object remove() -> remove
+    java.lang.Object poll() -> poll
+    java.lang.Object take() -> take
+    java.lang.Object poll(long,java.util.concurrent.TimeUnit) -> poll
+    java.lang.Object element() -> element
+    java.lang.Object peek() -> peek
+    int remainingCapacity() -> remainingCapacity
+    int drainTo(java.util.Collection) -> drainTo
+    int drainTo(java.util.Collection,int) -> drainTo
+    boolean remove(java.lang.Object) -> remove
+    int size() -> size
+    boolean contains(java.lang.Object) -> contains
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    java.lang.String toString() -> toString
+    void clear() -> clear
+    java.util.Iterator iterator() -> iterator
+com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$1 -> com.nostra13.universalimageloader.core.assist.deque.e:
+com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$AbstractItr -> com.nostra13.universalimageloader.core.assist.deque.f:
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node next -> a
+    java.lang.Object nextItem -> b
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node lastRet -> d
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque this$0 -> c
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node firstNode() -> a
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node nextNode(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node) -> a
+    void <init>(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque) -> <init>
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node succ(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node) -> b
+    void advance() -> b
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+    void remove() -> remove
+com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Itr -> com.nostra13.universalimageloader.core.assist.deque.g:
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque this$0 -> d
+    void <init>(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque) -> <init>
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node firstNode() -> a
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node nextNode(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node) -> a
+    void <init>(com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque,com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$1) -> <init>
+com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node -> com.nostra13.universalimageloader.core.assist.deque.h:
+    java.lang.Object item -> a
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node prev -> b
+    com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$Node next -> c
+    void <init>(java.lang.Object) -> <init>
+com.nostra13.universalimageloader.core.decode.BaseImageDecoder -> com.nostra13.universalimageloader.core.decode.a:
+    boolean loggingEnabled -> a
+    void <init>(boolean) -> <init>
+    android.graphics.Bitmap decode(com.nostra13.universalimageloader.core.decode.ImageDecodingInfo) -> a
+    java.io.InputStream getImageStream(com.nostra13.universalimageloader.core.decode.ImageDecodingInfo) -> b
+    com.nostra13.universalimageloader.core.decode.BaseImageDecoder$ImageFileInfo defineImageSizeAndRotation(java.io.InputStream,com.nostra13.universalimageloader.core.decode.ImageDecodingInfo) -> a
+    boolean canDefineExifParams(java.lang.String,java.lang.String) -> a
+    com.nostra13.universalimageloader.core.decode.BaseImageDecoder$ExifInfo defineExifOrientation(java.lang.String) -> a
+    android.graphics.BitmapFactory$Options prepareDecodingOptions(com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.decode.ImageDecodingInfo) -> a
+    java.io.InputStream resetStream(java.io.InputStream,com.nostra13.universalimageloader.core.decode.ImageDecodingInfo) -> b
+    android.graphics.Bitmap considerExactScaleAndOrientatiton(android.graphics.Bitmap,com.nostra13.universalimageloader.core.decode.ImageDecodingInfo,int,boolean) -> a
+com.nostra13.universalimageloader.core.decode.BaseImageDecoder$ExifInfo -> com.nostra13.universalimageloader.core.decode.b:
+    int rotation -> a
+    boolean flipHorizontal -> b
+    void <init>() -> <init>
+    void <init>(int,boolean) -> <init>
+com.nostra13.universalimageloader.core.decode.BaseImageDecoder$ImageFileInfo -> com.nostra13.universalimageloader.core.decode.c:
+    com.nostra13.universalimageloader.core.assist.ImageSize imageSize -> a
+    com.nostra13.universalimageloader.core.decode.BaseImageDecoder$ExifInfo exif -> b
+    void <init>(com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.decode.BaseImageDecoder$ExifInfo) -> <init>
+com.nostra13.universalimageloader.core.decode.ImageDecoder -> com.nostra13.universalimageloader.core.decode.d:
+    android.graphics.Bitmap decode(com.nostra13.universalimageloader.core.decode.ImageDecodingInfo) -> a
+com.nostra13.universalimageloader.core.decode.ImageDecodingInfo -> com.nostra13.universalimageloader.core.decode.e:
+    java.lang.String imageKey -> a
+    java.lang.String imageUri -> b
+    java.lang.String originalImageUri -> c
+    com.nostra13.universalimageloader.core.assist.ImageSize targetSize -> d
+    com.nostra13.universalimageloader.core.assist.ImageScaleType imageScaleType -> e
+    com.nostra13.universalimageloader.core.assist.ViewScaleType viewScaleType -> f
+    com.nostra13.universalimageloader.core.download.ImageDownloader downloader -> g
+    java.lang.Object extraForDownloader -> h
+    boolean considerExifParams -> i
+    android.graphics.BitmapFactory$Options decodingOptions -> j
+    void <init>(java.lang.String,java.lang.String,java.lang.String,com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.assist.ViewScaleType,com.nostra13.universalimageloader.core.download.ImageDownloader,com.nostra13.universalimageloader.core.DisplayImageOptions) -> <init>
+    void copyOptions(android.graphics.BitmapFactory$Options,android.graphics.BitmapFactory$Options) -> a
+    void copyOptions10(android.graphics.BitmapFactory$Options,android.graphics.BitmapFactory$Options) -> b
+    void copyOptions11(android.graphics.BitmapFactory$Options,android.graphics.BitmapFactory$Options) -> c
+    java.lang.String getImageKey() -> a
+    java.lang.String getImageUri() -> b
+    com.nostra13.universalimageloader.core.assist.ImageSize getTargetSize() -> c
+    com.nostra13.universalimageloader.core.assist.ImageScaleType getImageScaleType() -> d
+    com.nostra13.universalimageloader.core.assist.ViewScaleType getViewScaleType() -> e
+    com.nostra13.universalimageloader.core.download.ImageDownloader getDownloader() -> f
+    java.lang.Object getExtraForDownloader() -> g
+    boolean shouldConsiderExifParams() -> h
+    android.graphics.BitmapFactory$Options getDecodingOptions() -> i
+com.nostra13.universalimageloader.core.display.BitmapDisplayer -> com.nostra13.universalimageloader.core.display.a:
+    void display(android.graphics.Bitmap,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.assist.LoadedFrom) -> a
+com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer -> com.nostra13.universalimageloader.core.display.b:
+    int durationMillis -> a
+    boolean animateFromNetwork -> b
+    boolean animateFromDisk -> c
+    boolean animateFromMemory -> d
+    void <init>(int) -> <init>
+    void <init>(int,boolean,boolean,boolean) -> <init>
+    void display(android.graphics.Bitmap,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.assist.LoadedFrom) -> a
+    void animate(android.view.View,int) -> a
+com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer -> com.nostra13.universalimageloader.core.display.c:
+    void <init>() -> <init>
+    void display(android.graphics.Bitmap,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.assist.LoadedFrom) -> a
+com.nostra13.universalimageloader.core.download.BaseImageDownloader -> com.nostra13.universalimageloader.core.download.a:
+    android.content.Context context -> a
+    int connectTimeout -> b
+    int readTimeout -> c
+    void <init>(android.content.Context) -> <init>
+    void <init>(android.content.Context,int,int) -> <init>
+    java.io.InputStream getStream(java.lang.String,java.lang.Object) -> a
+    java.io.InputStream getStreamFromNetwork(java.lang.String,java.lang.Object) -> b
+    boolean shouldBeProcessed(java.net.HttpURLConnection) -> a
+    java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object) -> c
+    java.io.InputStream getStreamFromFile(java.lang.String,java.lang.Object) -> d
+    java.io.InputStream getVideoThumbnailStream(java.lang.String) -> a
+    java.io.InputStream getStreamFromContent(java.lang.String,java.lang.Object) -> e
+    java.io.InputStream getContactPhotoStream(android.net.Uri) -> a
+    java.io.InputStream getStreamFromAssets(java.lang.String,java.lang.Object) -> f
+    java.io.InputStream getStreamFromDrawable(java.lang.String,java.lang.Object) -> g
+    java.io.InputStream getStreamFromOtherSource(java.lang.String,java.lang.Object) -> h
+    boolean isVideoContentUri(android.net.Uri) -> b
+    boolean isVideoFileUri(java.lang.String) -> b
+com.nostra13.universalimageloader.core.download.BaseImageDownloader$1 -> com.nostra13.universalimageloader.core.download.b:
+    int[] $SwitchMap$com$nostra13$universalimageloader$core$download$ImageDownloader$Scheme -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.download.ImageDownloader -> com.nostra13.universalimageloader.core.download.c:
+    java.io.InputStream getStream(java.lang.String,java.lang.Object) -> a
+com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme -> com.nostra13.universalimageloader.core.download.d:
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme HTTP -> a
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme HTTPS -> b
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme FILE -> c
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme CONTENT -> d
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme ASSETS -> e
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme DRAWABLE -> f
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme UNKNOWN -> g
+    java.lang.String scheme -> h
+    java.lang.String uriPrefix -> i
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme[] $VALUES -> j
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme[] values() -> values
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int,java.lang.String) -> <init>
+    com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme ofUri(java.lang.String) -> a
+    boolean belongsTo(java.lang.String) -> d
+    java.lang.String wrap(java.lang.String) -> b
+    java.lang.String crop(java.lang.String) -> c
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.core.imageaware.ImageAware -> com.nostra13.universalimageloader.core.imageaware.a:
+    int getWidth() -> a
+    int getHeight() -> b
+    com.nostra13.universalimageloader.core.assist.ViewScaleType getScaleType() -> c
+    android.view.View getWrappedView() -> d
+    boolean isCollected() -> e
+    int getId() -> f
+    boolean setImageDrawable(android.graphics.drawable.Drawable) -> a
+    boolean setImageBitmap(android.graphics.Bitmap) -> a
+com.nostra13.universalimageloader.core.imageaware.ImageViewAware -> com.nostra13.universalimageloader.core.imageaware.b:
+    void <init>(android.widget.ImageView) -> <init>
+    int getWidth() -> a
+    int getHeight() -> b
+    com.nostra13.universalimageloader.core.assist.ViewScaleType getScaleType() -> c
+    android.widget.ImageView getWrappedView() -> g
+    void setImageDrawableInto(android.graphics.drawable.Drawable,android.view.View) -> a
+    void setImageBitmapInto(android.graphics.Bitmap,android.view.View) -> a
+    int getImageViewFieldValue(java.lang.Object,java.lang.String) -> a
+    android.view.View getWrappedView() -> d
+com.nostra13.universalimageloader.core.imageaware.ViewAware -> com.nostra13.universalimageloader.core.imageaware.c:
+    java.lang.ref.Reference viewRef -> a
+    boolean checkActualViewSize -> b
+    void <init>(android.view.View) -> <init>
+    void <init>(android.view.View,boolean) -> <init>
+    int getWidth() -> a
+    int getHeight() -> b
+    com.nostra13.universalimageloader.core.assist.ViewScaleType getScaleType() -> c
+    android.view.View getWrappedView() -> d
+    boolean isCollected() -> e
+    int getId() -> f
+    boolean setImageDrawable(android.graphics.drawable.Drawable) -> a
+    boolean setImageBitmap(android.graphics.Bitmap) -> a
+    void setImageDrawableInto(android.graphics.drawable.Drawable,android.view.View) -> a
+    void setImageBitmapInto(android.graphics.Bitmap,android.view.View) -> a
+com.nostra13.universalimageloader.core.listener.ImageLoadingListener -> com.nostra13.universalimageloader.core.listener.a:
+    void onLoadingStarted(java.lang.String,android.view.View) -> a
+    void onLoadingFailed(java.lang.String,android.view.View,com.nostra13.universalimageloader.core.assist.FailReason) -> a
+    void onLoadingComplete(java.lang.String,android.view.View,android.graphics.Bitmap) -> a
+    void onLoadingCancelled(java.lang.String,android.view.View) -> b
+com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener -> com.nostra13.universalimageloader.core.listener.b:
+    void onProgressUpdate(java.lang.String,android.view.View,int,int) -> a
+com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener -> com.nostra13.universalimageloader.core.listener.c:
+    void <init>() -> <init>
+    void onLoadingStarted(java.lang.String,android.view.View) -> a
+    void onLoadingFailed(java.lang.String,android.view.View,com.nostra13.universalimageloader.core.assist.FailReason) -> a
+    void onLoadingComplete(java.lang.String,android.view.View,android.graphics.Bitmap) -> a
+    void onLoadingCancelled(java.lang.String,android.view.View) -> b
+com.nostra13.universalimageloader.core.process.BitmapProcessor -> com.nostra13.universalimageloader.core.process.a:
+    android.graphics.Bitmap process(android.graphics.Bitmap) -> a
+com.nostra13.universalimageloader.utils.ImageSizeUtils -> com.nostra13.universalimageloader.utils.a:
+    com.nostra13.universalimageloader.core.assist.ImageSize maxBitmapSize -> a
+    com.nostra13.universalimageloader.core.assist.ImageSize defineTargetSizeForView(com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.assist.ImageSize) -> a
+    int computeImageSampleSize(com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.assist.ViewScaleType,boolean) -> a
+    int considerMaxTextureSize(int,int,int,boolean) -> a
+    int computeMinImageSampleSize(com.nostra13.universalimageloader.core.assist.ImageSize) -> a
+    float computeImageScale(com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.assist.ViewScaleType,boolean) -> b
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.utils.ImageSizeUtils$1 -> com.nostra13.universalimageloader.utils.b:
+    int[] $SwitchMap$com$nostra13$universalimageloader$core$assist$ViewScaleType -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.utils.IoUtils -> com.nostra13.universalimageloader.utils.c:
+    boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener,int) -> a
+    boolean shouldStopLoading(com.nostra13.universalimageloader.utils.IoUtils$CopyListener,int,int) -> a
+    void readAndCloseStream(java.io.InputStream) -> a
+    void closeSilently(java.io.Closeable) -> a
+com.nostra13.universalimageloader.utils.IoUtils$CopyListener -> com.nostra13.universalimageloader.utils.d:
+    boolean onBytesCopied(int,int) -> a
+com.nostra13.universalimageloader.utils.L -> com.nostra13.universalimageloader.utils.e:
+    boolean writeDebugLogs -> a
+    boolean writeLogs -> b
+    void writeDebugLogs(boolean) -> a
+    void d(java.lang.String,java.lang.Object[]) -> a
+    void i(java.lang.String,java.lang.Object[]) -> b
+    void w(java.lang.String,java.lang.Object[]) -> c
+    void e(java.lang.Throwable) -> a
+    void e(java.lang.String,java.lang.Object[]) -> d
+    void log(int,java.lang.Throwable,java.lang.String,java.lang.Object[]) -> a
+    void <clinit>() -> <clinit>
+com.nostra13.universalimageloader.utils.MemoryCacheUtils -> com.nostra13.universalimageloader.utils.f:
+    java.lang.String generateKey(java.lang.String,com.nostra13.universalimageloader.core.assist.ImageSize) -> a
+    java.util.Comparator createFuzzyKeyComparator() -> a
+com.nostra13.universalimageloader.utils.MemoryCacheUtils$1 -> com.nostra13.universalimageloader.utils.g:
+    void <init>() -> <init>
+    int compare(java.lang.String,java.lang.String) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.nostra13.universalimageloader.utils.StorageUtils -> com.nostra13.universalimageloader.utils.h:
+    java.io.File getCacheDirectory(android.content.Context) -> a
+    java.io.File getCacheDirectory(android.content.Context,boolean) -> a
+    java.io.File getIndividualCacheDirectory(android.content.Context) -> b
+    java.io.File getIndividualCacheDirectory(android.content.Context,java.lang.String) -> a
+    java.io.File getExternalCacheDir(android.content.Context) -> c
+    boolean hasExternalStoragePermission(android.content.Context) -> d
+com.smoothframe.activity.ActMain -> com.smoothframe.activity.ActMain:
+    android.widget.TabHost tabHost -> f
+    java.util.List mTabViews -> a
+    com.smoothframe.view.viewpage.JazzyViewPager mViewPager -> g
+    com.smoothframe.view.DialogDefault mDialogDefault -> h
+    void <init>() -> <init>
+    void setTabSelectedState(int,int) -> a
+    void onResume() -> onResume
+    void onClick(android.view.View) -> onClick
+    com.smoothframe.view.DialogDefault access$300(com.smoothframe.activity.ActMain) -> a
+com.smoothframe.activity.ActMain$4 -> com.smoothframe.activity.a:
+    com.smoothframe.activity.ActMain this$0 -> a
+    void <init>(com.smoothframe.activity.ActMain) -> <init>
+    void clickLeft() -> a
+com.smoothframe.activity.ActMain$5 -> com.smoothframe.activity.b:
+    com.smoothframe.activity.ActMain this$0 -> a
+    void <init>(com.smoothframe.activity.ActMain) -> <init>
+    void clickRight() -> a
+com.smoothframe.adapter.AdpPager -> com.smoothframe.adapter.a:
+    android.content.Context mContext -> a
+    java.util.ArrayList mTabs -> b
+    void <init>(android.support.v4.app.FragmentActivity) -> <init>
+    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> setPrimaryItem
+    int getCount() -> getCount
+    android.support.v4.app.Fragment getItem(int) -> getItem
+    void addTab(java.lang.Class,android.os.Bundle) -> a
+com.smoothframe.adapter.AdpPager$TabInfo -> com.smoothframe.adapter.b:
+    java.lang.Class mClss -> a
+    android.os.Bundle mArgs -> b
+    void <init>(java.lang.Class,android.os.Bundle) -> <init>
+    java.lang.Class access$000(com.smoothframe.adapter.AdpPager$TabInfo) -> a
+    android.os.Bundle access$100(com.smoothframe.adapter.AdpPager$TabInfo) -> b
+com.smoothframe.adapter.rcyAdp.BaseAdapterHelper -> com.smoothframe.adapter.rcyAdp.a:
+    android.util.SparseArray views -> a
+    void <init>(android.view.View) -> <init>
+    android.widget.ImageView getImageView(int) -> a
+    android.view.View retrieveView(int) -> b
+com.smoothframe.adapter.rcyAdp.BaseQuickAdapter -> com.smoothframe.adapter.rcyAdp.b:
+    java.lang.String TAG -> a
+    android.content.Context context -> b
+    int layoutResId -> c
+    java.util.List data -> d
+    boolean displayIndeterminateProgress -> e
+    com.smoothframe.adapter.rcyAdp.BaseQuickAdapter$OnItemClickListener mOnItemClickListener -> f
+    com.smoothframe.adapter.rcyAdp.BaseQuickAdapter$OnItemLongClickListener mOnItemLongClickListener -> g
+    android.view.View mHeadView -> h
+    boolean isHaveHeadView -> i
+    int mHeadViewCount -> j
+    void <init>(android.content.Context,int,java.util.List) -> <init>
+    boolean isHeader(int) -> a
+    int getItemViewType(int) -> getItemViewType
+    int getItemCount() -> getItemCount
+    java.lang.Object getItem(int) -> b
+    com.smoothframe.adapter.rcyAdp.BaseAdapterHelper onCreateViewHolder(android.view.ViewGroup,int) -> a
+    void onBindViewHolder(com.smoothframe.adapter.rcyAdp.BaseAdapterHelper,int) -> a
+    void convert(com.smoothframe.adapter.rcyAdp.BaseAdapterHelper,java.lang.Object) -> a
+    void onClick(android.view.View) -> onClick
+    void setOnItemClickListener(com.smoothframe.adapter.rcyAdp.BaseQuickAdapter$OnItemClickListener) -> a
+    void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
+    android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
+    com.smoothframe.adapter.rcyAdp.BaseQuickAdapter$OnItemLongClickListener access$000(com.smoothframe.adapter.rcyAdp.BaseQuickAdapter) -> a
+    void <clinit>() -> <clinit>
+com.smoothframe.adapter.rcyAdp.BaseQuickAdapter$1 -> com.smoothframe.adapter.rcyAdp.c:
+    com.smoothframe.adapter.rcyAdp.BaseQuickAdapter this$0 -> a
+    void <init>(com.smoothframe.adapter.rcyAdp.BaseQuickAdapter) -> <init>
+    boolean onLongClick(android.view.View) -> onLongClick
+com.smoothframe.adapter.rcyAdp.BaseQuickAdapter$OnItemClickListener -> com.smoothframe.adapter.rcyAdp.d:
+    void onItemClick(android.view.View,int) -> a
+com.smoothframe.adapter.rcyAdp.BaseQuickAdapter$OnItemLongClickListener -> com.smoothframe.adapter.rcyAdp.e:
+    void onItemLongClick(android.view.View,int) -> a
+com.smoothframe.adapter.rcyAdp.QuickAdapter -> com.smoothframe.adapter.rcyAdp.f:
+    void <init>(android.content.Context,int,java.util.List) -> <init>
+    void onViewDetachedFromWindow(com.smoothframe.adapter.rcyAdp.BaseAdapterHelper) -> a
+    void onViewAttachedToWindow(com.smoothframe.adapter.rcyAdp.BaseAdapterHelper) -> b
+    void onViewDetachedFromWindow(android.support.v7.widget.RecyclerView$ViewHolder) -> onViewDetachedFromWindow
+    void onViewAttachedToWindow(android.support.v7.widget.RecyclerView$ViewHolder) -> onViewAttachedToWindow
+com.smoothframe.base.BaseActivity -> com.smoothframe.base.BaseActivity:
+    com.smoothframe.view.CustomProgressDialog mProgressDialog -> a
+    android.content.Context mContext -> f
+    android.os.Bundle savedInstanceState -> b
+    com.smoothframe.http.HttpHelper httpHelper -> c
+    android.os.Handler handler -> d
+    boolean isTouchEvent -> e
+    void <init>() -> <init>
+    void getMessage(android.os.Message) -> a
+    int getLayoutId() -> a
+    void initView() -> b
+    void initData() -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void initSystemBar() -> d
+    void onClick(android.view.View) -> onClick
+    void onResume() -> onResume
+    void onStop() -> onStop
+    void onStart() -> onStart
+    void finish() -> finish
+    boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
+com.smoothframe.base.BaseActivity$1 -> com.smoothframe.base.a:
+    com.smoothframe.base.BaseActivity this$0 -> a
+    void <init>(com.smoothframe.base.BaseActivity) -> <init>
+    void handleMessage(android.os.Message) -> handleMessage
+com.smoothframe.base.BaseApplication -> com.smoothframe.base.BaseApplication:
+    void <init>() -> <init>
+com.smoothframe.base.BaseFragment -> com.smoothframe.base.BaseFragment:
+    android.app.ProgressDialog mProgressDialog -> e
+    com.android.volley.RequestQueue requestQueue -> a
+    com.smoothframe.http.HttpHelper httpHelper -> b
+    boolean isVisible -> c
+    android.view.View mView -> f
+    com.smoothframe.util.SharePreference spUtil -> g
+    android.os.Handler handler -> d
+    void <init>() -> <init>
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    void getMessage(android.os.Message) -> a
+    void onActivityCreated(android.os.Bundle) -> onActivityCreated
+    void lazyLoad() -> a
+    int getLayoutId() -> b
+    void initView(android.view.View) -> a
+    void initData() -> c
+    void onDetach() -> onDetach
+    void setUserVisibleHint(boolean) -> setUserVisibleHint
+    void onVisible() -> d
+    void onInvisible() -> e
+com.smoothframe.base.BaseFragment$1 -> com.smoothframe.base.b:
+    com.smoothframe.base.BaseFragment this$0 -> a
+    void <init>(com.smoothframe.base.BaseFragment) -> <init>
+    void handleMessage(android.os.Message) -> handleMessage
+com.smoothframe.fragment.FmFour -> com.smoothframe.fragment.FmFour:
+    android.support.v7.widget.RecyclerView mRecyclerView -> e
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout mSwipeRefreshLayout -> f
+    java.lang.String url -> g
+    void <init>() -> <init>
+    void getMessage(android.os.Message) -> a
+    void lazyLoad() -> a
+    int getLayoutId() -> b
+    void initView(android.view.View) -> a
+    void initData() -> c
+    void onLoad() -> f
+    void onRefresh() -> g
+    android.os.Handler access$000(com.smoothframe.fragment.FmFour) -> a
+    android.os.Handler access$100(com.smoothframe.fragment.FmFour) -> b
+    android.os.Handler access$200(com.smoothframe.fragment.FmFour) -> c
+    android.os.Handler access$300(com.smoothframe.fragment.FmFour) -> d
+    void <clinit>() -> <clinit>
+com.smoothframe.fragment.FmFour$1 -> com.smoothframe.fragment.a:
+    com.smoothframe.fragment.FmFour this$0 -> f
+    void <init>(com.smoothframe.fragment.FmFour,android.content.Context,int,java.util.List) -> <init>
+    void convert(com.smoothframe.adapter.rcyAdp.BaseAdapterHelper,java.lang.Object) -> a
+com.smoothframe.fragment.FmFour$2 -> com.smoothframe.fragment.b:
+    com.smoothframe.fragment.FmFour this$0 -> a
+    void <init>(com.smoothframe.fragment.FmFour) -> <init>
+    void onItemClick(android.view.View,int) -> a
+com.smoothframe.fragment.FmFour$3 -> com.smoothframe.fragment.c:
+    com.smoothframe.fragment.FmFour this$0 -> a
+    void <init>(com.smoothframe.fragment.FmFour) -> <init>
+    void run() -> run
+com.smoothframe.fragment.FmFour$4 -> com.smoothframe.fragment.d:
+    com.smoothframe.fragment.FmFour this$0 -> a
+    void <init>(com.smoothframe.fragment.FmFour) -> <init>
+    void run() -> run
+com.smoothframe.fragment.FmOne -> com.smoothframe.fragment.FmOne:
+    android.support.v4.view.ViewPager mViewPage -> e
+    android.widget.TextView mTvCollection -> f
+    android.widget.TextView mTvMake -> g
+    android.widget.LinearLayout mLayConllection -> h
+    android.widget.LinearLayout mLayMake -> i
+    android.widget.ImageView mImgLine -> j
+    int mCurrentIndex -> k
+    com.smoothframe.adapter.AdpPager mAdpPager -> l
+    int mWindowsWidth -> m
+    void <init>() -> <init>
+    void getMessage(android.os.Message) -> a
+    void lazyLoad() -> a
+    int getLayoutId() -> b
+    void initView(android.view.View) -> a
+    void initData() -> c
+    void onScorllImgLine(int,float,android.widget.RelativeLayout$LayoutParams) -> a
+    void onClick(android.view.View) -> onClick
+    android.widget.TextView access$000(com.smoothframe.fragment.FmOne) -> a
+    android.widget.TextView access$100(com.smoothframe.fragment.FmOne) -> b
+    int access$202(com.smoothframe.fragment.FmOne,int) -> a
+    android.widget.ImageView access$300(com.smoothframe.fragment.FmOne) -> c
+    void access$400(com.smoothframe.fragment.FmOne,int,float,android.widget.RelativeLayout$LayoutParams) -> a
+com.smoothframe.fragment.FmOne$1 -> com.smoothframe.fragment.e:
+    com.smoothframe.fragment.FmOne this$0 -> a
+    void <init>(com.smoothframe.fragment.FmOne) -> <init>
+    void onPageSelected(int) -> onPageSelected
+    void onPageScrolled(int,float,int) -> onPageScrolled
+    void onPageScrollStateChanged(int) -> onPageScrollStateChanged
+com.smoothframe.fragment.FmThree -> com.smoothframe.fragment.FmThree:
+    void <init>() -> <init>
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+com.smoothframe.fragment.FmTwo -> com.smoothframe.fragment.FmTwo:
+    void <init>() -> <init>
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+com.smoothframe.fragment.childFragment.FmOneOne -> com.smoothframe.fragment.childFragment.FmOneOne:
+    void <init>() -> <init>
+    void onCreate(android.os.Bundle) -> onCreate
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    void onDestroy() -> onDestroy
+com.smoothframe.fragment.childFragment.FmOneTwo -> com.smoothframe.fragment.childFragment.FmOneTwo:
+    void <init>() -> <init>
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+com.smoothframe.http.HttpHelper -> com.smoothframe.http.a:
+    android.content.Context context -> b
+    com.android.volley.RequestQueue queue -> c
+    java.lang.String baseUrl -> d
+    com.android.volley.Response$ErrorListener errorListener -> a
+    void <init>(android.content.Context) -> <init>
+    void stop() -> a
+    void start() -> b
+    void cancelAll() -> c
+    android.content.Context access$000(com.smoothframe.http.HttpHelper) -> a
+com.smoothframe.http.HttpHelper$1 -> com.smoothframe.http.b:
+    com.smoothframe.http.HttpHelper this$0 -> a
+    void <init>(com.smoothframe.http.HttpHelper) -> <init>
+    void onErrorResponse(com.android.volley.VolleyError) -> a
+com.smoothframe.http.VolleyErrorHelper -> com.smoothframe.http.c:
+    java.lang.String getMessage(java.lang.Object) -> a
+    boolean isNetWorkPrlblem(java.lang.Object) -> b
+    boolean isServerProblem(java.lang.Object) -> c
+com.smoothframe.util.SharePreference -> com.smoothframe.util.a:
+com.smoothframe.util.Tools -> com.smoothframe.util.b:
+    com.nostra13.universalimageloader.core.ImageLoaderConfiguration config -> c
+    com.nostra13.universalimageloader.core.DisplayImageOptions options -> a
+    android.widget.AbsListView$OnScrollListener onScrollListener -> b
+    android.support.design.widget.Snackbar mSnackbar -> d
+    int WINDOWS_WIDTH -> e
+    void initDisplayImageOptions() -> a
+    void initImageLoader(android.content.Context) -> a
+    float getWindowsWidth(android.app.Activity) -> a
+    int dpToPx(android.content.res.Resources,int) -> a
+    void <clinit>() -> <clinit>
+com.smoothframe.view.CustomProgressDialog -> com.smoothframe.view.a:
+    android.widget.ImageView red -> a
+    android.widget.ImageView green -> b
+    android.widget.ImageView blue -> c
+    void <init>(android.content.Context) -> <init>
+    void onCreate(android.os.Bundle) -> onCreate
+    void starLoading() -> a
+    void startAnimation1() -> b
+    void startAnimation2() -> c
+    void startAnimation3() -> d
+com.smoothframe.view.DialogDefault -> com.smoothframe.view.b:
+    android.view.View mCustomView -> a
+    android.app.AlertDialog mCustomDialog -> b
+    android.view.LayoutInflater inflate -> c
+    void <init>(android.content.Context,java.lang.String,java.lang.String,java.lang.String,com.smoothframe.view.DialogDefault$OnClickLeft,com.smoothframe.view.DialogDefault$OnClickRight) -> <init>
+    void show() -> a
+    void dismiss() -> b
+    void setCanceledOnTouchOutside(boolean) -> a
+com.smoothframe.view.DialogDefault$1 -> com.smoothframe.view.c:
+    com.smoothframe.view.DialogDefault$OnClickRight val$onClickRight -> a
+    com.smoothframe.view.DialogDefault this$0 -> b
+    void <init>(com.smoothframe.view.DialogDefault,com.smoothframe.view.DialogDefault$OnClickRight) -> <init>
+    void onClick(android.view.View) -> onClick
+com.smoothframe.view.DialogDefault$2 -> com.smoothframe.view.d:
+    com.smoothframe.view.DialogDefault$OnClickLeft val$onClickLeft -> a
+    com.smoothframe.view.DialogDefault this$0 -> b
+    void <init>(com.smoothframe.view.DialogDefault,com.smoothframe.view.DialogDefault$OnClickLeft) -> <init>
+    void onClick(android.view.View) -> onClick
+com.smoothframe.view.DialogDefault$OnClickLeft -> com.smoothframe.view.e:
+    void clickLeft() -> a
+com.smoothframe.view.DialogDefault$OnClickRight -> com.smoothframe.view.f:
+    void clickRight() -> a
+com.smoothframe.view.swipeRefreshLayout.BakedBezierInterpolator -> com.smoothframe.view.swipeRefreshLayout.a:
+    com.smoothframe.view.swipeRefreshLayout.BakedBezierInterpolator INSTANCE -> a
+    float[] VALUES -> b
+    float STEP_SIZE -> c
+    com.smoothframe.view.swipeRefreshLayout.BakedBezierInterpolator getInstance() -> a
+    void <init>() -> <init>
+    float getInterpolation(float) -> getInterpolation
+    void <clinit>() -> <clinit>
+com.smoothframe.view.swipeRefreshLayout.SwipeProgressBar -> com.smoothframe.view.swipeRefreshLayout.b:
+    android.view.animation.Interpolator INTERPOLATOR -> a
+    android.graphics.Paint mPaint -> b
+    android.graphics.RectF mClipRect -> c
+    float mTriggerPercentage -> d
+    long mStartTime -> e
+    long mFinishTime -> f
+    boolean mRunning -> g
+    int mColor1 -> h
+    int mColor2 -> i
+    int mColor3 -> j
+    int mColor4 -> k
+    android.view.View mParent -> l
+    android.graphics.Rect mBounds -> m
+    void <init>(android.view.View) -> <init>
+    void setColorScheme(int,int,int,int) -> a
+    void setTriggerPercentage(float) -> a
+    void start() -> a
+    void stop() -> b
+    void draw(android.graphics.Canvas) -> a
+    void drawTrigger(android.graphics.Canvas,int,int) -> a
+    void drawCircle(android.graphics.Canvas,float,float,int,float) -> a
+    void setBounds(int,int,int,int) -> b
+    void <clinit>() -> <clinit>
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout -> com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout:
+    java.lang.String LOG_TAG -> a
+    com.smoothframe.view.swipeRefreshLayout.SwipeProgressBar mProgressBar -> b
+    com.smoothframe.view.swipeRefreshLayout.SwipeProgressBar mProgressBarBottom -> c
+    android.view.View mTarget -> d
+    int mOriginalOffsetTop -> e
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$OnRefreshListener mRefreshListener -> f
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$OnLoadListener mLoadListener -> g
+    int mFrom -> h
+    boolean mRefreshing -> i
+    boolean mLoading -> j
+    int mTouchSlop -> k
+    float mDistanceToTriggerSync -> l
+    int mMediumAnimationDuration -> m
+    float mFromPercentage -> n
+    float mCurrPercentage -> o
+    int mProgressBarHeight -> p
+    int mCurrentTargetOffsetTop -> q
+    float mInitialMotionY -> r
+    float mLastMotionY -> s
+    boolean mIsBeingDragged -> t
+    int mActivePointerId -> u
+    boolean mReturningToStart -> v
+    android.view.animation.DecelerateInterpolator mDecelerateInterpolator -> w
+    android.view.animation.AccelerateInterpolator mAccelerateInterpolator -> x
+    int[] LAYOUT_ATTRS -> y
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode mMode -> z
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode mLastDirection -> A
+    int mDirection -> B
+    float mStartPoint -> C
+    boolean up -> D
+    boolean down -> E
+    boolean loadNoFull -> F
+    android.view.animation.Animation mAnimateToStartPosition -> G
+    android.view.animation.Animation mShrinkTrigger -> H
+    android.view.animation.Animation mShrinkTriggerBottom -> I
+    android.view.animation.Animation$AnimationListener mReturnToStartPositionListener -> J
+    android.view.animation.Animation$AnimationListener mShrinkAnimationListener -> K
+    java.lang.Runnable mReturnToStartPosition -> L
+    java.lang.Runnable mCancel -> M
+    void <init>(android.content.Context) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void animateOffsetToStartPosition(int,android.view.animation.Animation$AnimationListener) -> a
+    void setOnRefreshListener(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$OnRefreshListener) -> setOnRefreshListener
+    void setOnLoadListener(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$OnLoadListener) -> setOnLoadListener
+    void setTriggerPercentage(float) -> setTriggerPercentage
+    void setRefreshing(boolean) -> setRefreshing
+    void setLoading(boolean) -> setLoading
+    void setColor(int,int,int,int) -> a
+    void setColorSchemeResources(int,int,int,int) -> b
+    void setColorSchemeResourcesBottom(int,int,int,int) -> c
+    void setColorSchemeColors(int,int,int,int) -> d
+    void setColorSchemeColorsBottom(int,int,int,int) -> e
+    void ensureTarget() -> c
+    void draw(android.graphics.Canvas) -> draw
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void onMeasure(int,int) -> onMeasure
+    boolean canChildScrollUp() -> a
+    boolean canChildScrollDown() -> b
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    void requestDisallowInterceptTouchEvent(boolean) -> requestDisallowInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void startRefresh() -> d
+    void startLoad() -> e
+    void updateContentOffsetTop(int) -> a
+    void setTargetOffsetTopAndBottom(int) -> setTargetOffsetTopAndBottom
+    void updatePositionTimeout() -> f
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void setMode(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode) -> setMode
+    void setLoadNoFull(boolean) -> setLoadNoFull
+    int access$000(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> a
+    int access$100(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> b
+    android.view.View access$200(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> c
+    void access$300(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,int) -> a
+    float access$400(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> d
+    com.smoothframe.view.swipeRefreshLayout.SwipeProgressBar access$500(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> e
+    com.smoothframe.view.swipeRefreshLayout.SwipeProgressBar access$600(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> f
+    int access$802(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,int) -> b
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode access$902(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode) -> a
+    float access$1002(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,float) -> a
+    boolean access$1102(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,boolean) -> a
+    int access$800(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> g
+    android.view.animation.Animation$AnimationListener access$1200(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> h
+    void access$1300(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,int,android.view.animation.Animation$AnimationListener) -> a
+    float access$402(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,float) -> b
+    float access$1000(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> i
+    int access$1400(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> j
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode access$1500(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> k
+    int access$1600(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> l
+    android.view.animation.Animation access$1700(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> m
+    android.view.animation.Animation$AnimationListener access$1800(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> n
+    android.view.animation.DecelerateInterpolator access$1900(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> o
+    android.view.animation.Animation access$2000(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> p
+    int access$1402(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,int) -> c
+    void <clinit>() -> <clinit>
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$1 -> com.smoothframe.view.swipeRefreshLayout.c:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> a
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void applyTransformation(float,android.view.animation.Transformation) -> applyTransformation
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$2 -> com.smoothframe.view.swipeRefreshLayout.d:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> a
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void applyTransformation(float,android.view.animation.Transformation) -> applyTransformation
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$3 -> com.smoothframe.view.swipeRefreshLayout.e:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> a
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void applyTransformation(float,android.view.animation.Transformation) -> applyTransformation
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$4 -> com.smoothframe.view.swipeRefreshLayout.f:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> a
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$5 -> com.smoothframe.view.swipeRefreshLayout.g:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> a
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$6 -> com.smoothframe.view.swipeRefreshLayout.h:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> a
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void run() -> run
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$7 -> com.smoothframe.view.swipeRefreshLayout.i:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> a
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void run() -> run
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$BaseAnimationListener -> com.smoothframe.view.swipeRefreshLayout.j:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout this$0 -> b
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout) -> <init>
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void <init>(com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout,com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$1) -> <init>
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode -> com.smoothframe.view.swipeRefreshLayout.k:
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode DISABLED -> a
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode PULL_FROM_START -> b
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode PULL_FROM_END -> c
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode BOTH -> d
+    int mIntValue -> e
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode[] $VALUES -> f
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode[] values() -> values
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode valueOf(java.lang.String) -> valueOf
+    com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$Mode getDefault() -> a
+    void <init>(java.lang.String,int,int) -> <init>
+    void <clinit>() -> <clinit>
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$OnLoadListener -> com.smoothframe.view.swipeRefreshLayout.l:
+    void onLoad() -> f
+com.smoothframe.view.swipeRefreshLayout.SwipeRefreshLayout$OnRefreshListener -> com.smoothframe.view.swipeRefreshLayout.m:
+    void onRefresh() -> g
+com.smoothframe.view.viewpage.JazzyViewPager -> com.smoothframe.view.viewpage.JazzyViewPager:
+    boolean mEnabled -> b
+    boolean mFadeEnabled -> c
+    boolean mOutlineEnabled -> d
+    int sOutlineColor -> a
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect mEffect -> e
+    java.util.HashMap mObjs -> f
+    boolean API_11 -> g
+    com.smoothframe.view.viewpage.JazzyViewPager$State mState -> h
+    int oldPage -> i
+    android.view.View mLeft -> j
+    android.view.View mRight -> k
+    float mRot -> l
+    float mTrans -> m
+    float mScale -> n
+    android.graphics.Matrix mMatrix -> o
+    android.graphics.Camera mCamera -> p
+    float[] mTempFloat2 -> q
+    com.smoothframe.view.viewpage.JazzyViewPager$SlideCallback slideCallback -> r
+    void <init>(android.content.Context) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    void setTransitionEffect(com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect) -> setTransitionEffect
+    void setPagingEnabled(boolean) -> setPagingEnabled
+    void setFadeEnabled(boolean) -> setFadeEnabled
+    boolean getFadeEnabled() -> getFadeEnabled
+    void setOutlineEnabled(boolean) -> setOutlineEnabled
+    void setOutlineColor(int) -> setOutlineColor
+    void wrapWithOutlines() -> a
+    android.view.View wrapChild(android.view.View) -> a
+    void addView(android.view.View) -> addView
+    void addView(android.view.View,int) -> addView
+    void addView(android.view.View,int,int) -> addView
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    void animateTablet(android.view.View,android.view.View,float) -> a
+    void animateCube(android.view.View,android.view.View,float,boolean) -> a
+    void animateAccordion(android.view.View,android.view.View,float) -> b
+    void animateZoom(android.view.View,android.view.View,float,boolean) -> b
+    void animateRotate(android.view.View,android.view.View,float,boolean) -> c
+    void animateFlipHorizontal(android.view.View,android.view.View,float,int) -> c
+    void animateFlipVertical(android.view.View,android.view.View,float,int) -> d
+    void animateStack(android.view.View,android.view.View,float,int) -> a
+    void manageLayer(android.view.View,boolean) -> a
+    void disableHardwareLayer() -> b
+    float getOffsetXForRotation(float,int,int) -> a
+    void setSlideCallBack(com.smoothframe.view.viewpage.JazzyViewPager$SlideCallback) -> setSlideCallBack
+    void animateFade(android.view.View,android.view.View,float,int) -> b
+    void animateOutline(android.view.View,android.view.View) -> a
+    void onPageScrolled(int,float,int) -> onPageScrolled
+    boolean isSmall(float) -> a
+    android.view.View findViewFromObject(int) -> a
+    void <clinit>() -> <clinit>
+com.smoothframe.view.viewpage.JazzyViewPager$1 -> com.smoothframe.view.viewpage.a:
+    int[] $SwitchMap$com$smoothframe$view$viewpage$JazzyViewPager$TransitionEffect -> a
+    void <clinit>() -> <clinit>
+com.smoothframe.view.viewpage.JazzyViewPager$SlideCallback -> com.smoothframe.view.viewpage.b:
+    void callBack(int,float) -> a
+com.smoothframe.view.viewpage.JazzyViewPager$State -> com.smoothframe.view.viewpage.c:
+    com.smoothframe.view.viewpage.JazzyViewPager$State IDLE -> a
+    com.smoothframe.view.viewpage.JazzyViewPager$State GOING_LEFT -> b
+    com.smoothframe.view.viewpage.JazzyViewPager$State GOING_RIGHT -> c
+    com.smoothframe.view.viewpage.JazzyViewPager$State[] $VALUES -> d
+    com.smoothframe.view.viewpage.JazzyViewPager$State[] values() -> values
+    com.smoothframe.view.viewpage.JazzyViewPager$State valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect -> com.smoothframe.view.viewpage.d:
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect Standard -> a
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect Tablet -> b
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect CubeIn -> c
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect CubeOut -> d
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect FlipVertical -> e
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect FlipHorizontal -> f
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect Stack -> g
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect ZoomIn -> h
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect ZoomOut -> i
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect RotateUp -> j
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect RotateDown -> k
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect Accordion -> l
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect[] $VALUES -> m
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect[] values() -> values
+    com.smoothframe.view.viewpage.JazzyViewPager$TransitionEffect valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.smoothframe.view.viewpage.OutlineContainer -> com.smoothframe.view.viewpage.e:
+    android.graphics.Paint mOutlinePaint -> a
+    boolean mIsRunning -> b
+    long mStartTime -> c
+    float mAlpha -> d
+    android.view.animation.Interpolator mInterpolator -> e
+    java.lang.Runnable mUpdater -> f
+    void <init>(android.content.Context) -> <init>
+    void init() -> a
+    void dispatchDraw(android.graphics.Canvas) -> dispatchDraw
+    void setOutlineAlpha(float) -> setOutlineAlpha
+    boolean isRunning() -> isRunning
+    void start() -> start
+    void stop() -> stop
+    long access$000(com.smoothframe.view.viewpage.OutlineContainer) -> a
+    float access$102(com.smoothframe.view.viewpage.OutlineContainer,float) -> a
+    android.view.animation.Interpolator access$200(com.smoothframe.view.viewpage.OutlineContainer) -> b
+    java.lang.Runnable access$300(com.smoothframe.view.viewpage.OutlineContainer) -> c
+com.smoothframe.view.viewpage.OutlineContainer$1 -> com.smoothframe.view.viewpage.f:
+    com.smoothframe.view.viewpage.OutlineContainer this$0 -> a
+    void <init>(com.smoothframe.view.viewpage.OutlineContainer) -> <init>
+    float getInterpolation(float) -> getInterpolation
+com.smoothframe.view.viewpage.OutlineContainer$2 -> com.smoothframe.view.viewpage.g:
+    com.smoothframe.view.viewpage.OutlineContainer this$0 -> a
+    void <init>(com.smoothframe.view.viewpage.OutlineContainer) -> <init>
+    void run() -> run

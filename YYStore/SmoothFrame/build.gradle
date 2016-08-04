@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/Volley.jar')
+    compile files('libs/universal-image-loader-1.9.4-with-sources.jar')
+    compile files('libs/gson-2.2.4.jar')
+    compile files('libs/master-nineoldandroids-library.jar')
+    compile 'com.android.support:design:22.2.0'
+    compile 'com.android.support:cardview-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'jp.wasabeef:recyclerview-animators:1.0.1'
+    compile 'com.bartoszlipinski.recyclerviewheader:library:1.2.0'
+    //andfix热更新框架
+    compile 'com.alipay.euler:andfix:0.3.1@aar'
+    //facebook图片加载框架
+    //    compile 'com.facebook.fresco:fresco:0.6.0+'
+    //dexposed 5.0以上不可以使用，因为目前不能兼容androidRunningTime(ART)运行模式，所以暂时不做集成。
+    //    compile 'com.taobao.android:dexposed:0.1.1@aar'
+}

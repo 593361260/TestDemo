@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_topview"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:theme="@style/BlueTheme"
+    app:elevation="0dp"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_topview"
+        android:theme="@style/BlueTheme"
+        app:elevation="0dp"
+        >
+        <!--
+        android:background="#33036CC2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+        <LinearLayout
+            android:id="@+id/linear_drag"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:text="@string/search_close"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_rect"
+                android:elevation="0dp"
+                android:gravity="center_vertical"
+                >
+
+                <EditText
+                    android:id="@+id/edit_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:elevation="0dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="@string/string_search_hint"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="3dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/action_blue"
+                    android:textSize="12sp"
+                    />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:elevation="0dp"
+                android:text="@string/string_search"/>
+
+
+        </LinearLayout>
+
+        <com.wcl.uustore.widget.LivingTabsLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            app:elevation="0dp"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="holo_blue">#FF33E5B5</color>
+
+    <color name="primary_orange">#fe671c</color>
+    <color name="primary_text">#545454</color>
+    <color name="primary_second_text">#dfdfdf</color>
+    <color name="primary_dark_text">#212121</color>
+    <color name="primary_bg_light">#f4f4f4</color>
+    <color name="primary_bg_dark">#dfdfdf</color>
+    <color name="drive">#c5c5c5</color>
+
+    <drawable name="primary_orange">#fe671c</drawable>
+    <drawable name="primary_text">#545454</drawable>
+    <drawable name="primary_bg_light">#f4f4f4</drawable>
+    <drawable name="primary_bg_dark">#dfdfdf</drawable>
+    <drawable name="drive">#c5c5c5</drawable>
+
+</resources>
